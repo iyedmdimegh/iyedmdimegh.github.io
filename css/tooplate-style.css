@@ -671,6 +671,7 @@ b, strong {
   width: 400px;
   height: 250px;
   transition: transform 0.3s ease;
+  box-shadow: #0c0c0d;
 }
 .work-container .project-item .project-img-container{
   width: 400px;
