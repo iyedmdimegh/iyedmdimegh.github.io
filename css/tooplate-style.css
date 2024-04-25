@@ -638,12 +638,60 @@ b, strong {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 12px;
 }
+.shadowed{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
-.dark-mode .pfp-image{
+.dark-mode .shadowed{
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 /* past color #ffc200; */
 
+
+/* uni projects list  */
+
+.work-container{
+  margin: 0px 230px;
+}
+.work-container h2{
+  text-align: center;
+  margin: 0px auto 100px;
+}
+.work-container .project-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.work-container .project-item .description-container{
+  width: 50%;
+}
+
+.work-container .project-item img{
+  width: 400px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+.work-container .project-item .project-img-container{
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.work-container .project-item img:hover {
+  transform: scale(1.1);
+}
+
+.work-container .project-item ul{
+  display: inline-flex;
+}
+.work-container .project-item ul li{
+  margin-right: 5px;
+  padding: 3px 6px;
+  color: #ffffff;
+  background-color: #008080;
+  border-radius: 4px;
+}
 
 
 
