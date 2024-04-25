@@ -759,9 +759,7 @@ section.contact{
   background: linear-gradient(145deg,  #474559, #9F2727);
   border-radius: 12px;
 }
-.skills-container div{
-  width: 60%;
-}
+
 .skills-container .AI-skills{
   width: 40%;
   background: linear-gradient(145deg, #5EBEBE, #008080, #474559);
@@ -848,6 +846,24 @@ section.contact{
   }
   .about{
     padding-top: 50px;
+  }
+
+
+
+
+  .skills-container{
+    display: block;
+
+  }
+  .skills-container ul{
+    min-width: 250px;
+    margin: 0;
+  }
+  .skills-container div{
+    width: 100%;
+  }
+  .AI-skills,.other-skills{
+    margin: 50px 0 100px 0% !important;
   }
 }
 
