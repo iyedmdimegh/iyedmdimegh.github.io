@@ -951,3 +951,16 @@ section.contact{
 }
 
 
+
+.dark-mode .navbar-nav li a{
+  background-color: #0c0c0d;
+  color: white;
+}
+
+.dark-mode .navbar-collapse  {
+  align-items: center;
+  background-color: #0c0c0d;
+  
+}
+
+
