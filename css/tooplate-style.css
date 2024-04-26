@@ -694,7 +694,7 @@ b, strong {
 }
 @media (max-width: 880px) {
   .work-container{
-    margin: 0px 30%;
+    margin: 0px 10%;
     align-items: center;
   }
   .work-container .project-item{
@@ -943,6 +943,11 @@ section.contact{
 .email{
   background: #ff6b6b;
 }
- 
+@media (max-width: 300px) {
+  .contact-btn-container{
+    margin: 0 0 0 20px;
+  }
+
+}
 
 
