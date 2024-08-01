@@ -1,16 +1,10 @@
 projectImg1=document.getElementById("projectImg1");
 projectImg2=document.getElementById("projectImg2");
+projectImg4=document.getElementById("projectImg4");
 
-
-
-projectImg1 = document.getElementById("projectImg1");
-projectImg2 = document.getElementById("projectImg2");
 setInterval(function () {
-    projectImg1.src = "images/project/linkkit-2.png";
-    projectImg2.src = "images/project/platform-2.png";
-    setTimeout(function () {
-        projectImg1.src = "images/project/linkkit-1.png";
-        projectImg2.src = "images/project/platform-1.png";
-    }, 2000); // Move this setTimeout inside the first setTimeout
-}, 4000); // Adjust the interval to 2000 milliseconds (2 seconds) to match the combined setTimeouts
+    projectImg1.src = projectImg1.src.substring(0, projectImg1.src.length - 5) + ((+projectImg1.src[projectImg1.src.length - 5] +1)%2) + ".png";
+    projectImg2.src = projectImg2.src.substring(0, projectImg2.src.length - 5) + ((+projectImg2.src[projectImg2.src.length - 5] +1)%3) + ".png";
+    projectImg4.src = projectImg4.src.substring(0, projectImg4.src.length - 5) + ((+projectImg4.src[projectImg4.src.length - 5] +1)%5) + ".png";
+}, 3000);
     

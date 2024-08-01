@@ -358,7 +358,6 @@ b, strong {
   font-family: 'unicons';
   content: '\eb65';
   font-size: 30px;
-  color: #ffffff;
 }
 
 .dark-mode {
@@ -683,10 +682,13 @@ b, strong {
 }
 
 .work-container .project-item ul{
-  display: inline-flex;
+  display: inline-flex ;
+  flex-wrap: wrap;
+  
 }
 .work-container .project-item ul li{
   margin-right: 5px;
+  margin-bottom: 10px;
   padding: 3px 6px;
   color: #ffffff;
   background-color: #008080;
