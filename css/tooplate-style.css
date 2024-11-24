@@ -156,7 +156,7 @@ b, strong {
   animation-delay: 5s;
 }
 .animated-item:nth-child(3n+3) {
-  width: 290px;
+  width: 375px;
 }
 .animated-item:nth-child(2n+2) span{
   animation-delay: 5s;
@@ -870,13 +870,15 @@ section.contact{
     animation-delay: 5s;
   }
   .animated-item:nth-child(3n+3) {
-    width: 180px;
+    width: 230px;
+    /* width: 180px; */
     margin-left: 40px;
   }
   .animated-item:nth-child(2n+2) span{
     animation-delay: 5s;
   }
   .animated-item:nth-child(3n+3) span{
+    /* animation-delay: 10s; */
     animation-delay: 10s;
   }
   .container{
