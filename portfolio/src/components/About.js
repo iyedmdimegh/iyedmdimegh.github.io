@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
-import {pfp, BASE_URL } from '../data/constants.js';
+import {pfp, BASE_URL, RESUME_ENDPOINT } from '../data/constants.js';
 
 function About() {
   const phrases = [
@@ -29,7 +29,7 @@ function About() {
           </h1>
           <button
             className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition-colors duration-300"
-            onClick={() => window.open('/path-to-your-resume.pdf', '_blank')}
+            onClick={() => window.open( `${BASE_URL + RESUME_ENDPOINT}` , '_blank')}
           >
             <svg
               className="w-4 h-4 sm:w-5 sm:h-5 mr-2"

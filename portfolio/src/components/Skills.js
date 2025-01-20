@@ -1,30 +1,22 @@
 import React from 'react';
+import {skillCategories} from '../data/constants';
 
 function Skills() {
-  const skillCategories = {
-    webDevelopment: {
-      title: "web development",
-      skills: ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "React.js", "Node.js", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL"],
-      bgColor: "from-purple-900 to-red-800"
-    },
-    ai: {
-      title: "AI",
-      skills: ["Deep Reinforcement Learning", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Computer Vision"],
-      bgColor: "from-teal-600 to-teal-900"
-    },
-    other: {
-      title: "other",
-      skills: ["Git", "GitHub", "Linux", "C++", "C", "Assembly", "VSCode"],
-      bgColor: "from-slate-600 to-slate-800"
-    }
-  };
+  
 
   return (
     <section id="skills" className="my-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-      <h2 className="text-4xl font-bold mb-16 text-gray-800 dark:text-gray-200 text-center">
-        Skills
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300 dark:border-gray-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="bg-gray-100 dark:bg-gray-900 px-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
+          Skills
+          </span>
+        </div>
+      </div>
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Object.values(skillCategories).map((category) => (
           <div 
             key={category.title}

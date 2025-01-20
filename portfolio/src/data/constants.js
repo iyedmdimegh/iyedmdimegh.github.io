@@ -1,9 +1,10 @@
-
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export const name = "Portfolio"
 export const description = "A simple portfolio website"
 export const BASE_URL = "https://iyedmdimegh.github.io/newportfolio/"
 export const pfp = "/assets/images/pfp/pfp.jpg"
+export const RESUME_ENDPOINT = "resume.pdf"
 export const projects = [
   {
     "id": 1,
@@ -113,3 +114,27 @@ export const skillCategories = {
       bgColor: "from-slate-600 to-slate-800"
     }
   };
+
+export const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <FaGithub className="w-6 h-6 sm:w-8 sm:h-8" />,
+      url: 'https://github.com/iyedmdimegh',
+      color: 'hover:text-gray-700 dark:hover:text-gray-300',
+      description: 'my projects and contributions'
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedin className="w-6 h-6 sm:w-8 sm:h-8" />,
+      url: 'https://www.linkedin.com/in/iyed-mdimegh-21b1b5285/',
+      color: 'hover:text-blue-600 dark:hover:text-blue-400',
+      description: 'Connect with me'
+    },
+    {
+      name: 'Email',
+      icon: <FaEnvelope className="w-6 h-6 sm:w-8 sm:h-8" />,
+      url: 'mailto:iyedmdimegh@gmail.com',
+      color: 'hover:text-red-600 dark:hover:text-red-400',
+      description: 'Drop me a message'
+    }
+  ];

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes, FaCode } from 'react-icons/fa';
+import { BASE_URL, RESUME_ENDPOINT } from '../data/constants';
 
 function Header({ darkMode, setDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const navItems = ['About', 'Projects', 'Resume', 'Contact'];
+  const navItems = ['About', 'Projects', 'Resume', 'Connect'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +64,8 @@ function Header({ darkMode, setDarkMode }) {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={item === "Resume" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
+                    target={item === "Resume" ? "_blank" : "_self"}
                     className="group relative px-3 py-2 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     <span className="relative z-10">
@@ -93,7 +95,8 @@ function Header({ darkMode, setDarkMode }) {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={item === "Resume" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
+                    target={item === "Resume" ? "_blank" : "_self"}
                     className="group relative block px-3 py-2 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out hover:text-blue-600 dark:hover:text-blue-400"
                     onClick={() => setIsMenuOpen(false)}
                   >

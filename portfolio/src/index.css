@@ -3,6 +3,9 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-white dark:bg-gray-900 transition-colors duration-300;
   }

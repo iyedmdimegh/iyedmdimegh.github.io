@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Resume from './components/Resume';
 import Footer from './components/Footer';
 import RecentUpdates from './components/RecentUpdates';
 import Skills from './components/Skills';
+import Connect from './components/Connect';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,7 +26,7 @@ export default function App() {
         <Projects />
         <RecentUpdates />
         <Skills />
-        <Resume />
+        <Connect />
       </main>
       <Footer />
     </div>

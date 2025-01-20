@@ -41,11 +41,18 @@ function RecentUpdates() {
   });
 
   return (
-    <section className="mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-      <h2 className="text-3xl font-bold mb-16 text-gray-800 dark:text-gray-200 text-center">
-        Recent Updates
-      </h2>
-      <div className="relative h-[400px] md:h-[650px] overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
+    <section className="mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16" id="Recentupdates">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300 dark:border-gray-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="bg-gray-100 dark:bg-gray-900 px-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
+          Recent Updates
+          </span>
+        </div>
+      </div>
+      <div className="mt-16 relative h-[400px] md:h-[650px] overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
         <div
           {...handlers}
           className="h-full w-full flex transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing"
