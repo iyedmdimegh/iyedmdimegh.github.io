@@ -95,3 +95,21 @@ export const recentUpdates = [
   },
 
 ];
+
+export const skillCategories = {
+    webDevelopment: {
+      title: "web development",
+      skills: ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "React.js", "Node.js", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL"],
+      bgColor: "from-purple-900 to-red-800"
+    },
+    ai: {
+      title: "AI",
+      skills: ["Deep Reinforcement Learning", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Computer Vision"],
+      bgColor: "from-teal-600 to-teal-900"
+    },
+    other: {
+      title: "other",
+      skills: ["Git", "GitHub", "Linux", "C++", "C", "Assembly", "VSCode"],
+      bgColor: "from-slate-600 to-slate-800"
+    }
+  };

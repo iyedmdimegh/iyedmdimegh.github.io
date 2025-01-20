@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaYoutube, FaGithub, FaFileAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useSwipeable } from 'react-swipeable';
 
-function ProjectItem({ title, description, images, technologies, youtubeLink, githubLink, documentLink }) {
+function ProjectItemMobile({ title, description, images, technologies, youtubeLink, githubLink, documentLink }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -43,32 +43,37 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
     trackMouse: true
   });
 
-
-  // Desktop version
-  const desktopVersion = (
-    <div className="hidden md:flex my-4 bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+  return (
+    <div className="flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      {/* Project Image Carousel */}
       <div 
         {...handlers}
-        className="relative w-1/2 h-[400px] overflow-hidden bg-gray-100 dark:bg-gray-700 my-auto"
+        className="relative h-[250px] md:h-[300px] overflow-hidden bg-gray-100 dark:bg-gray-700 cursor-grab active:cursor-grabbing"
       >
         <div 
-          className="h-full flex transition-transform duration-500 ease-out "
-          style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+          className="h-full w-full flex transition-transform duration-500 ease-out"
+          style={{
+            transform: `translateX(-${currentImageIndex * 100}%)`,
+          }}
         >
           {images.map((image, index) => (
-            <div key={index} className="h-full min-w-full ">
+            <div key={index} className="relative w-full h-full flex-shrink-0">
               <img
                 src={image}
                 alt={`${title} - Image ${index + 1}`}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain object-center flex-shrink-0"
                 draggable="false"
               />
+              {/* Gradient overlays */}
+              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
           ))}
         </div>
         
         {images.length > 1 && (
           <>
+            {/* Navigation Buttons */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -90,6 +95,7 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
               <FaChevronRight className="w-4 h-4" />
             </button>
 
+            {/* Image Indicators */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
               {images.map((_, index) => (
                 <button
@@ -115,10 +121,11 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
         )}
       </div>
 
-      <div className="w-1/2 p-8 flex flex-col">
+      {/* Project Info */}
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex-grow">
-          <div className="flex justify-between items-start mb-6">
-            <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
               {title}
             </h3>
             <div className="flex gap-2">
@@ -154,16 +161,17 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
               )}
             </div>
           </div>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             {description}
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mt-4">
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-4 py-2 text-sm font-medium rounded-full bg-teal-600 text-white hover:bg-teal-700 transition-colors duration-300"
+              className="px-3 py-1 text-sm font-medium rounded-full bg-teal-600 text-white hover:bg-teal-700 transition-colors duration-300"
             >
               {tech}
             </span>
@@ -172,12 +180,6 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
       </div>
     </div>
   );
-
-  return (
-    <>
-      {desktopVersion}
-    </>
-  );
 }
 
-export default ProjectItem;
+export default ProjectItemMobile;
