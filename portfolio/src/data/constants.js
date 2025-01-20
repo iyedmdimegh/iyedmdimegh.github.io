@@ -78,8 +78,8 @@ export const recentUpdates = [
   {
     id: 2,
     image: "/assets/images/updates/AINS-HACK.jpg",
-    title: "I am currently Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
-    description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
+    title: "I am currently Vice Chair,",
+    description: "As Vice Chair and responsable for Technical Activities, ops to enhance the skills and learning opportunities of our 250+ members."
   },
   {
     id: 3,

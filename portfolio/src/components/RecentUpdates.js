@@ -42,10 +42,10 @@ function RecentUpdates() {
 
   return (
     <section className="mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-      <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200 text-center">
+      <h2 className="text-3xl font-bold mb-16 text-gray-800 dark:text-gray-200 text-center">
         Recent Updates
       </h2>
-      <div className="relative h-[400px] md:h-[500px] overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
+      <div className="relative h-[400px] md:h-[650px] overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
         <div
           {...handlers}
           className="h-full w-full flex transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing"
@@ -63,10 +63,10 @@ function RecentUpdates() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-2">
                     {update.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-200">
+                  <p className="text-xs md:text-base text-gray-200">
                     {update.description}
                   </p>
                 </div>

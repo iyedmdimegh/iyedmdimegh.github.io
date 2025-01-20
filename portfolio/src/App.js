@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import RecentUpdates from './components/RecentUpdates';
+import Skills from './components/Skills';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +26,7 @@ export default function App() {
         <About />
         <Projects />
         <RecentUpdates />
+        <Skills />
         <Resume />
       </main>
       <Footer />

@@ -48,7 +48,7 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
       {/* Project Image Carousel */}
       <div 
         {...handlers}
-        className="relative h-[300px] overflow-hidden bg-gray-100 dark:bg-gray-700 cursor-grab active:cursor-grabbing"
+        className="relative h-[250px] md:h-[300px] overflow-hidden bg-gray-100 dark:bg-gray-700 cursor-grab active:cursor-grabbing"
       >
         <div 
           className="h-full w-full flex transition-transform duration-500 ease-out"
