@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTypingEffect } from '../hooks/useTypingEffect';
+import {pfp, BASE_URL } from '../data/constants.js';
 
 function About() {
   const phrases = [
@@ -50,7 +51,7 @@ function About() {
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72">
             <img
-              src="/pfp.jpg"
+              src={`${BASE_URL + pfp}`}
               alt="Profile"
               className="rounded-2xl object-cover w-full h-full shadow-lg"
             />

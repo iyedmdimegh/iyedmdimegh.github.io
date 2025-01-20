@@ -1,17 +1,120 @@
-import React from 'react';
-import { FaYoutube, FaGithub, FaFileAlt } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { FaYoutube, FaGithub, FaFileAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useSwipeable } from 'react-swipeable';
 
-function ProjectItem({ title, description, image, technologies, youtubeLink, githubLink, documentLink }) {
+function ProjectItem({ title, description, images, technologies, youtubeLink, githubLink, documentLink }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      if (!isTransitioning) {
+        handleNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length, isTransitioning]);
+
+  const handleNext = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
+
+  const handlePrevious = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrevious,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
   return (
     <div className="flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      {/* Project Image */}
-      <div className="h-[300px] overflow-hidden bg-gray-100 dark:bg-gray-700">
-        <img 
-          src={image} 
-          // src="../assets/images/project/platform-1.png" 
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+      {/* Project Image Carousel */}
+      <div 
+        {...handlers}
+        className="relative h-[300px] overflow-hidden bg-gray-100 dark:bg-gray-700 cursor-grab active:cursor-grabbing"
+      >
+        <div 
+          className="h-full w-full flex transition-transform duration-500 ease-out"
+          style={{
+            transform: `translateX(-${currentImageIndex * 100}%)`,
+          }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${title} - Image ${index + 1}`}
+              className="w-full h-full object-cover flex-shrink-0"
+              draggable="false"
+            />
+          ))}
+        </div>
+        
+        {images.length > 1 && (
+          <>
+            {/* Navigation Buttons */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePrevious();
+              }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors duration-300 z-10"
+              aria-label="Previous image"
+            >
+              <FaChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNext();
+              }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors duration-300 z-10"
+              aria-label="Next image"
+            >
+              <FaChevronRight className="w-4 h-4" />
+            </button>
+
+            {/* Image Indicators */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!isTransitioning) {
+                      setIsTransitioning(true);
+                      setCurrentImageIndex(index);
+                      setTimeout(() => setIsTransitioning(false), 500);
+                    }
+                  }}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    currentImageIndex === index 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       {/* Project Info */}

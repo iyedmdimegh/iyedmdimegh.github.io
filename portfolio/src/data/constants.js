@@ -2,6 +2,7 @@
 export const name = "Portfolio"
 export const description = "A simple portfolio website"
 export const BASE_URL = "https://iyedmdimegh.github.io/newportfolio/"
+export const pfp = "/assets/images/pfp/pfp.jpg"
 export const projects = [
   {
     "id": 1,
@@ -11,13 +12,13 @@ export const projects = [
     "technologies": ["Deep Reinforcement Learning", "React.js", "Three.js", "Django", "TailwindCSS", "Dynamic Programming"],
     "youtubeLink": "https://youtu.be/WB1j8iTJYVE",
     "githubLink": "",
-    "documentLink": ""
+    "documentLink": `${BASE_URL}/documents/reports/Pixemantic.pdf`
   },
   {
     "id": 2,
     "title": "SMARTSHIELD - AI-Driven Cybersecurity Incident Response Platform",
     "description": "SMARTSHIELD is an AI-powered platform designed for automated detection, classification, and response to cybersecurity incidents, capable of handling large volumes of network logs. Led a team in developing the platform, focusing on machine learning models for real-time threat detection and classification, ensuring high accuracy and scalability. Developed a user-friendly dashboard that visualizes real-time threats and provides an option to view AI-generated reports for detected threats.",
-    "images": ["/assets/images/project/smartshield/image1.png", "/assets/images/project/smartshield/image2.png", "/assets/images/project/smartshield/image3.png"],
+    "images": ["/assets/images/project/smartshield/image0.png","/assets/images/project/smartshield/image1.png", "/assets/images/project/smartshield/image2.png", "/assets/images/project/smartshield/image3.png"],
     "technologies": ["CatBoost", "XGBoost", "FastAPI", "NestJS", "React", "TailwindCSS", "PostgreSQL", "Kibana", "Docker", "CrewAI", "RabbitMQ", "openArgus", "Zeek"],
     "youtubeLink": "https://youtu.be/2Nd6C_SpXak",
     "githubLink": "",
@@ -27,27 +28,27 @@ export const projects = [
     "id": 3,
     "title": "INSAT Chess Coach Robot",
     "description": "Led a team to develop the INSAT Chess Coach Robot, an interactive robotic chess system designed for the TSYP contest. The project integrates computer vision, a robotic arm, and an adaptive chess engine to offer a unique learning experience. Key features include physical piece manipulation, skill-matched gameplay, real-time feedback, and educational modes, all while using standard chess equipment. This innovative system bridges the gap between digital and physical chess learning.",
-    "images": ["/assets/images/project/chessCoach/image1.png"],
+    "images": ["/assets/images/project/chessCoach/image0.png", "/assets/images/project/chessCoach/image2.png", "/assets/images/project/chessCoach/image3.png"],
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Computer Vision"],
     "youtubeLink": "",
     "githubLink": "",
-    "documentLink": "/documents/chessTechnicalPaper.pdf"
+    "documentLink": `${BASE_URL}/documents/papers/chessTechnicalPaper.pdf`
   },
   {
     "id": 4,
     "title": "Messaging Web App",
     "description": "This project was developed during my internship at Proxym-IT. This messaging App is designed to offer seamless real-time communication, eliminating delays and enhancing the user experience. It efficiently handles scalability issues, ensuring reliable performance even with a growing number of users and messages. The app prioritizes security with robust user authentication measures, protecting user data and privacy. Additionally, it provides comprehensive group communication features and customizable user experiences to meet diverse needs.",
-    "images": ["/assets/images/project/messenger-0.png"],
+    "images": ["/assets/images/project/messenger-0.png", "/assets/images/project/messenger-1.png", "/assets/images/project/messenger-2.png", "/assets/images/project/messenger-3.png", "/assets/images/project/messenger-4.png"],
     "technologies": ["React.js", "Express.js", "MongoDB", "Socket.io", "TailwindCSS", "Node.js", "Postman", "MUI-icons"],
     "youtubeLink": "",
     "githubLink": "",
-    "documentLink": "/reports/Proxym.pdf"
+    "documentLink": `${BASE_URL}/documents/reports/Proxym.pdf`
   },
   {
     "id": 6,
     "title": "University platform",
     "description": "School Management System is a web platform designed to facilitate the management of schedules, attendance, exam details, and enrollment requests within a school environment. It provides separate interfaces for students, teachers, and administrators, each tailored to their specific needs.",
-    "images": ["/assets/images/project/platform-1.png"],
+    "images": ["/assets/images/project/platform-0.png", "/assets/images/project/platform-1.png", "/assets/images/project/platform-2.png"],
     "technologies": ["Javascript", "PHP", "Chart.js", "HTML", "CSS"],
     "youtubeLink": "",
     "githubLink": "https://github.com/iyedmdimegh/UniversityManagementSystem-symfonyVersion",

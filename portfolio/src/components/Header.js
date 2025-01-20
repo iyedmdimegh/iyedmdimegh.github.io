@@ -1,12 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes, FaCode } from 'react-icons/fa';
 
 function Header({ darkMode, setDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const navItems = ['About', 'Projects', 'Resume', 'Contact'];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isScrollingUp = prevScrollPos > currentScrollPos;
+      
+      // Only update visibility when scrolling more than 70px
+      if (Math.abs(prevScrollPos - currentScrollPos) > 70) {
+        setVisible(isScrollingUp || currentScrollPos < 10);
+        setPrevScrollPos(currentScrollPos);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md">
+    <header 
+      className={`fixed w-full top-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-md transition-transform duration-300 ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo and Name Section */}

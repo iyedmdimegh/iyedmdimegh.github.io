@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 
-function App() {
+export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -30,6 +30,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
-
