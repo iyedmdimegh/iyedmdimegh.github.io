@@ -57,13 +57,17 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
           }}
         >
           {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`${title} - Image ${index + 1}`}
-              className="w-full h-full object-cover flex-shrink-0"
-              draggable="false"
-            />
+            <div key={index} className="relative w-full h-full flex-shrink-0">
+              <img
+                src={image}
+                alt={`${title} - Image ${index + 1}`}
+                className="w-full h-full object-contain object-center flex-shrink-0"
+                draggable="false"
+              />
+              {/* Gradient overlays */}
+              <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/50 to-transparent"></div>
+            </div>
           ))}
         </div>
         
@@ -92,7 +96,7 @@ function ProjectItem({ title, description, images, technologies, youtubeLink, gi
             </button>
 
             {/* Image Indicators */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
               {images.map((_, index) => (
                 <button
                   key={index}

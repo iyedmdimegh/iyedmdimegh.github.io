@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
+import RecentUpdates from './components/RecentUpdates';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,9 +23,9 @@ export default function App() {
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <About />
-         <Projects /> 
-        {/* <Contact />  */}
-        {/* <Resume /> */}
+        <Projects />
+        <RecentUpdates />
+        <Resume />
       </main>
       <Footer />
     </div>
