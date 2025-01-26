@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon, FaBars, FaTimes, FaCode } from 'react-icons/fa';
-import { BASE_URL, RESUME_ENDPOINT } from '../data/constants';
+import { FaSun, FaMoon, FaBars, FaTimes, FaCode, FaLanguage } from 'react-icons/fa';
+import { BASE_URL, RESUME_ENDPOINT, header_component_content, header_component_content_french } from '../data/constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function Header({ darkMode, setDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const navItems = ['About', 'Projects', 'Resume', 'Connect'];
+  const { language, toggleLanguage } = useLanguage();
+  
+  const content = language === 'en' ? header_component_content : header_component_content_french;
+  const navItems = content.navItems;
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const isScrollingUp = prevScrollPos > currentScrollPos;
       
-      // Only update visibility when scrolling more than 70px
       if (Math.abs(prevScrollPos - currentScrollPos) > 70) {
         setVisible(isScrollingUp || currentScrollPos < 10);
         setPrevScrollPos(currentScrollPos);
@@ -45,6 +48,12 @@ function Header({ darkMode, setDarkMode }) {
           {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4 sm:hidden">
             <button
+              onClick={toggleLanguage}
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+            >
+              <FaLanguage className="w-5 h-5" />
+            </button>
+            <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
             >
@@ -64,8 +73,8 @@ function Header({ darkMode, setDarkMode }) {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={item === "Resume" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
-                    target={item === "Resume" ? "_blank" : "_self"}
+                    href={item === "Resume" || item === "CV" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
+                    target={item === "Resume" || item === "CV" ? "_blank" : "_self"}
                     className="group relative px-3 py-2 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     <span className="relative z-10">
@@ -77,6 +86,13 @@ function Header({ darkMode, setDarkMode }) {
                 </li>
               ))}
             </ul>
+            <button
+              onClick={toggleLanguage}
+              className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+              aria-label="Toggle language"
+            >
+              <FaLanguage className="w-5 h-5" />
+            </button>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
@@ -95,8 +111,8 @@ function Header({ darkMode, setDarkMode }) {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={item === "Resume" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
-                    target={item === "Resume" ? "_blank" : "_self"}
+                    href={item === "Resume" || item === "CV" ? `${BASE_URL}${RESUME_ENDPOINT}` : `#${item.toLowerCase()}`}
+                    target={item === "Resume" || item === "CV" ? "_blank" : "_self"}
                     className="group relative block px-3 py-2 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out hover:text-blue-600 dark:hover:text-blue-400"
                     onClick={() => setIsMenuOpen(false)}
                   >

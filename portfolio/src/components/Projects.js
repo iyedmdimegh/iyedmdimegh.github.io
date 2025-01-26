@@ -1,14 +1,17 @@
-
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ProjectItem from './ProjectItem';
-import ProjectItemMobile from './ProjectItemMobile'; // Import the mobile version
-import { projects, BASE_URL } from '../data/constants.js';
+import ProjectItemMobile from './ProjectItemMobile';
+import { projects, projects_french, BASE_URL, projects_component_content, projects_component_content_french } from '../data/constants.js';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function Projects() {
-  // Define breakpoints for screen size
-  const isMobile = useMediaQuery({ maxWidth: 768 }); // For screens smaller than 768px (mobile)
-  const isDesktop = useMediaQuery({ minWidth: 769 }); // For screens 769px and larger (PC)
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 769 });
+  const { language } = useLanguage();
+  
+  const content = language === 'en' ? projects_component_content : projects_component_content_french;
+  const projectsList = language === 'en' ? projects : projects_french;
 
   return (
     <section id="projects" className="mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
@@ -18,14 +21,13 @@ function Projects() {
         </div>
         <div className="relative flex justify-center">
           <span className="bg-gray-100 dark:bg-gray-900 px-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
-            My Projects
+            {content.myProjects}
           </span>
         </div>
       </div>
       <div className="mt-14 grid grid-cols-1 gap-8">
-        {projects.map((project) =>
+        {projectsList.map((project) =>
           isMobile ? (
-            // Render ProjectItemMobile for smaller screens
             <ProjectItemMobile
               key={project.id}
               title={project.title}
@@ -37,7 +39,6 @@ function Projects() {
               documentLink={project.documentLink}
             />
           ) : isDesktop ? (
-            // Render ProjectItem for larger screens
             <ProjectItem
               key={project.id}
               title={project.title}
@@ -55,4 +56,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Projects

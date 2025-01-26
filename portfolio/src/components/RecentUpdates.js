@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useSwipeable } from 'react-swipeable';
-import { recentUpdates, BASE_URL } from '../data/constants';
+import { recentUpdates, recentUpdates_french, BASE_URL, recentUpdates_component_content, recentUpdates_component_content_french } from '../data/constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function RecentUpdates() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { language } = useLanguage();
+  
+  const content = language === 'en' ? recentUpdates_component_content : recentUpdates_component_content_french;
+  const updates = language === 'en' ? recentUpdates : recentUpdates_french;
 
   useEffect(() => {
-    if (recentUpdates.length <= 1) return;
+    if (updates.length <= 1) return;
 
     const interval = setInterval(() => {
       if (!isTransitioning) {
@@ -22,14 +27,14 @@ function RecentUpdates() {
   const handleNext = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % recentUpdates.length);
+    setCurrentIndex((prev) => (prev + 1) % updates.length);
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
   const handlePrev = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + recentUpdates.length) % recentUpdates.length);
+    setCurrentIndex((prev) => (prev - 1 + updates.length) % updates.length);
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
@@ -48,7 +53,7 @@ function RecentUpdates() {
         </div>
         <div className="relative flex justify-center">
           <span className="bg-gray-100 dark:bg-gray-900 px-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
-          Recent Updates
+            {content.recentUpdates}
           </span>
         </div>
       </div>
@@ -60,7 +65,7 @@ function RecentUpdates() {
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
-          {recentUpdates.map((update, index) => (
+          {updates.map((update, index) => (
             <div key={update.id} className="w-full h-full flex-shrink-0 relative">
               <img
                 src={BASE_URL + update.image}
@@ -82,7 +87,7 @@ function RecentUpdates() {
           ))}
         </div>
 
-        {recentUpdates.length > 1 && (
+        {updates.length > 1 && (
           <>
             <button
               onClick={handlePrev}
@@ -100,7 +105,7 @@ function RecentUpdates() {
             </button>
 
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {recentUpdates.map((_, index) => (
+              {updates.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => {
@@ -126,4 +131,5 @@ function RecentUpdates() {
   );
 }
 
-export default RecentUpdates;
+
+export default RecentUpdates

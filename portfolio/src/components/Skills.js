@@ -1,8 +1,11 @@
 import React from 'react';
-import {skillCategories} from '../data/constants';
+import { skillCategories, skillCategories_french, skills_component_content, skills_component_content_french } from '../data/constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function Skills() {
-  
+  const { language } = useLanguage();
+  const content = language === 'en' ? skills_component_content : skills_component_content_french;
+  const categories = language === 'en' ? skillCategories : skillCategories_french;
 
   return (
     <section id="skills" className="my-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
@@ -12,12 +15,12 @@ function Skills() {
         </div>
         <div className="relative flex justify-center">
           <span className="bg-gray-100 dark:bg-gray-900 px-6 text-4xl font-bold text-gray-800 dark:text-gray-200">
-          Skills
+            {content.skills}
           </span>
         </div>
       </div>
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {Object.values(skillCategories).map((category) => (
+        {Object.values(categories).map((category) => (
           <div 
             key={category.title}
             className={`rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br ${category.bgColor}`}
@@ -44,4 +47,5 @@ function Skills() {
   );
 }
 
-export default Skills;
+
+export default Skills

@@ -1,6 +1,10 @@
 import React from 'react';
+import { footer_component_content, footer_component_content_french } from '../data/constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 function Footer() {
+  const { language } = useLanguage();
+  const content = language === 'en' ? footer_component_content : footer_component_content_french;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -9,25 +13,24 @@ function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <nav className="flex space-x-6">
             <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              About
+              {content.about}
             </a>
             <a href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              Projects
+              {content.projects}
             </a>
             <a href="#Recentupdates" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-            Recent Updates
+              {content.recentUpdates}
             </a>
             <a href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-              Skills
+              {content.skills}
             </a>
           </nav>
           <p className="text-gray-600 dark:text-gray-300 text-sm">
-            © {currentYear} Iyed Mdimegh. All rights reserved.
+            © {currentYear} {content.allRightsReserved}
           </p>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;
+export default Footer
