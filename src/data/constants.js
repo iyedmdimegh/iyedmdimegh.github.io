@@ -5,6 +5,7 @@ export const description = "A simple portfolio website"
 export const BASE_URL = "https://iyedmdimegh.github.io/"
 export const pfp = "/assets/images/pfp/pfp.jpg"
 export const RESUME_ENDPOINT = "resume.pdf"
+export const LOGO = "/assets/images/pfp/logo.png"
 // English pack 
 
 export const projects = [
@@ -32,9 +33,9 @@ export const projects = [
     "id": 3,
     "title": "INSAT Chess Coach Robot",
     "description": "Led a team to develop the INSAT Chess Coach Robot, an interactive robotic chess system designed for the TSYP contest. The project integrates computer vision, a robotic arm, and an adaptive chess engine to offer a unique learning experience. Key features include physical piece manipulation, skill-matched gameplay, real-time feedback, and educational modes, all while using standard chess equipment. This innovative system bridges the gap between digital and physical chess learning.",
-    "images": ["/assets/images/project/chessCoach/image0.png", "/assets/images/project/chessCoach/image2.png", "/assets/images/project/chessCoach/image3.png"],
+    "images": ["/assets/images/project/chessCoach/image0.png", "/assets/images/project/chessCoach/image2.png", "/assets/images/project/chessCoach/image3.png", "/assets/images/project/chessCoach/image4.png", "/assets/images/project/chessCoach/image5.png"],
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Computer Vision"],
-    "youtubeLink": "",
+    "youtubeLink": "https://youtu.be/odGnHj1qUEk",
     "githubLink": "",
     "documentLink": `${BASE_URL}assets/documents/papers/chessTechnicalPaper.pdf`
   },
@@ -74,24 +75,36 @@ export const projects = [
 export const recentUpdates = [
   {
     id: 1,
+    image: "/assets/images/updates/tsypchesspicceremonie.jpg",
+    title: "Won 1st Prize at TSYP Chess Coach Challenge",
+    description: "Along with my team, we secured the 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Further description of the award-winning project is prvided in the projects section."
+  },
+  // {
+  //   id: 2,
+  //   image: "/assets/images/updates/vctaPic.jpg",
+  //   title: "I am currently Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
+  //   description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
+  // },
+  {
+    id: 3,
     image: "/assets/images/updates/vctaPic.jpg",
     title: "I am currently Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
     description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
   },
   {
-    id: 2,
+    id: 4,
     image: "/assets/images/updates/AINS-HACK.jpg",
     title: "3rd Place at AINS HACKATHON (Artificial Intelligence National Summit)",
     description: "Our team competed against 20 others with a project focused on AI agents, earning us the 3rd prize."
   },
   {
-    id: 3,
+    id: 5,
     image: "/assets/images/updates/project-image01.jpg",
     title: "1st prize at Enicar Coding Arena - Competitive Programming Contest",
     description: "Along with my team I competed at a Competitive Programming Contest and solved the greatest number of problems."
   },
   {
-    id: 4,
+    id: 6,
     image: "/assets/images/updates/hackathon.jpg",
     title: `Organizing Commitee President of the Hackathon "Hack for good 2.0"`,
     description: "Along with team I organized a hackathon that held 140 participants and attracted many students across the country to contribute to this event with outstanding projects."
@@ -212,11 +225,10 @@ export const awards_component_content = {
       prize: "1st Prize",
     },
     {
-      title: "1st Prize at Enicar Coding Arena",
-      description: 
-        "Earned 1st place in the Enicar Coding Arena, a competitive programming contest. My team outperformed others by solving the highest number of challenging algorithmic problems.",
-      prize: "1st Prize",
-    },
+      title: "1st Place at ATCCM National Mathematics Contest",
+      description: "Achieved first place nationally and qualified for the international competition held in Paris.",
+      prize: "1st Prize"
+    }    
   ],
 };
 
@@ -252,9 +264,9 @@ export const projects_french = [
     "id": 3,
     "title": "Robot entraîneur d'échecs INSAT",
     "description": "J'ai dirigé une équipe pour développer le Robot entraîneur d'échecs INSAT, un système d'échecs robotique interactif conçu pour le concours TSYP. Le projet intègre une vision par ordinateur, un bras robotique et un moteur d'échecs adaptatif pour offrir une expérience d'apprentissage unique. Les principales caractéristiques incluent la manipulation physique des pièces, un gameplay adapté au niveau de compétence, des retours en temps réel et des modes éducatifs, tout en utilisant un équipement d'échecs standard. Ce système innovant comble le fossé entre l'apprentissage des échecs numérique et physique.",
-    "images": ["/assets/images/project/chessCoach/image0.png", "/assets/images/project/chessCoach/image2.png", "/assets/images/project/chessCoach/image3.png"],
+    "images": ["/assets/images/project/chessCoach/image0.png", "/assets/images/project/chessCoach/image2.png", "/assets/images/project/chessCoach/image3.png", "/assets/images/project/chessCoach/image4.png", "/assets/images/project/chessCoach/image5.png"],
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Vision par ordinateur"],
-    "youtubeLink": "",
+    "youtubeLink": "https://youtu.be/odGnHj1qUEk",
     "githubLink": "",
     "documentLink": `${BASE_URL}assets/documents/papers/chessTechnicalPaper.pdf`
   },
@@ -292,25 +304,37 @@ export const projects_french = [
 
 export const recentUpdates_french = [
   {
-    id: 1,
+    "id": 1,
+    "image": "/assets/images/updates/tsypchesspicceremonie.jpg",
+    "title": "1er Prix au Défi Coach d'Échecs TSYP",
+    "description": "Avec mon équipe, nous avons remporté la 1ère place au défi national Coach d'Échecs TSYP, en compétition contre des équipes de 20 universités à travers la Tunisie. Une description détaillée du projet primé est disponible dans la section des projets."
+  },
+  // {
+  //   "id": 2,
+  //   "image": "/assets/images/updates/tsypchesspicceremonie.jpg",
+  //   "title": "1er Prix au Défi Coach d'Échecs TSYP",
+  //   "description": "Avec mon équipe, nous avons remporté la 1ère place au défi national Coach d'Échecs TSYP, en compétition contre des équipes de 20 universités à travers la Tunisie. Une description détaillée du projet primé est disponible dans la section des projets."
+  // },
+  {
+    id: 3,
     image: "/assets/images/updates/vctaPic.jpg",
     title: "Je suis actuellement Vice-Président, Activités Techniques au IEEE INSAT Computer Society Chapter",
     description: "En tant que Vice-Président et responsable des Activités Techniques, je dirige et gère des projets techniques innovants, développe le plan annuel et organise des ateliers impactants pour améliorer les compétences et les opportunités d'apprentissage de nos 250+ membres."
   },
   {
-    id: 2,
+    id: 4,
     image: "/assets/images/updates/AINS-HACK.jpg",
     title: "3ème place au HACKATHON AINS (Sommet National d'Intelligence Artificielle)",
     description: "Notre équipe a affronté 20 autres avec un projet axé sur les agents IA, nous valant le 3ème prix."
   },
   {
-    id: 3,
+    id: 5,
     image: "/assets/images/updates/project-image01.jpg",
     title: "1er prix au Enicar Coding Arena - Concours de Programmation Compétitive",
     description: "Avec mon équipe, j'ai participé à un concours de programmation compétitive et résolu le plus grand nombre de problèmes."
   },
   {
-    id: 4,
+    id: 6,
     image: "/assets/images/updates/hackathon.jpg",
     title: `Président du Comité Organisateur du Hackathon \"Hack for good 2.0\"`,
     description: "Avec mon équipe, j'ai organisé un hackathon qui a rassemblé 140 participants et attiré de nombreux étudiants à travers le pays pour contribuer à cet événement avec des projets exceptionnels."
@@ -426,11 +450,11 @@ export const awards_component_content_french = {
       prize: "1er Prix",
     },
     {
-      title: "1er Prix à l’Enicar Coding Arena",
-      description: 
-        "Remporté la 1ère place à l’Enicar Coding Arena, un concours de programmation compétitive. Mon équipe s’est distinguée en résolvant le plus grand nombre de problèmes algorithmiques complexes.",
-      prize: "1er Prix",
-    },
+      title: "1ère Place au Concours National de Mathématiques ATCCM",
+      description: "Remporté la première place au niveau national et qualifié pour le concours international à Paris.",
+      prize: "1er Prix"
+    }
+    
   ],
 };
 

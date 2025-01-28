@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes, FaCode, FaLanguage } from 'react-icons/fa';
-import { BASE_URL, RESUME_ENDPOINT, header_component_content, header_component_content_french } from '../data/constants';
+import { BASE_URL, RESUME_ENDPOINT, header_component_content, header_component_content_french, LOGO } from '../data/constants';
 import { useLanguage } from '../contexts/LanguageContext';
 
 function Header({ darkMode, setDarkMode }) {
@@ -37,9 +37,10 @@ function Header({ darkMode, setDarkMode }) {
         <div className="flex justify-between items-center">
           {/* Logo and Name Section */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
+            <img src={BASE_URL+LOGO} alt="Logo" className="w-10 h-10 rounded-full" />
+            {/* <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
               <FaCode className="w-5 h-5 text-white" />
-            </div>
+            </div> */}
             <h1 className="text-xl font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
               Iyed Mdimegh
             </h1>
