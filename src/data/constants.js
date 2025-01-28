@@ -115,7 +115,7 @@ export const recentUpdates = [
 export const skillCategories = {
     webDevelopment: {
       title: "web development",
-      skills: ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "React.js", "Node.js", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL"],
+      skills: ["React.js", "Node.js", "Django", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL","HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", ],
       bgColor: "from-purple-900 to-red-800"
     },
     ai: {
@@ -125,7 +125,7 @@ export const skillCategories = {
     },
     other: {
       title: "other",
-      skills: ["Git", "GitHub", "Linux", "C++", "C", "Assembly", "VSCode"],
+      skills: ["Git", "GitHub", "Linux", "C++", "C", "Raspberry pi 5", ],
       bgColor: "from-slate-600 to-slate-800"
     }
   };
@@ -344,17 +344,17 @@ export const recentUpdates_french = [
 export const skillCategories_french = {
     webDevelopment: {
       title: "Développement web",
-      skills: ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "React.js", "Node.js", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL"],
+      skills: ["React.js", "Node.js", "Django", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL","HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", ],
       bgColor: "from-purple-900 to-red-800"
     },
     ai: {
       title: "IA",
-      skills: ["Apprentissage par renforcement profond", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Vision par ordinateur"],
+      skills: ["Deep Reinforcement Learning", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Computer Vision"],
       bgColor: "from-teal-600 to-teal-900"
     },
     other: {
       title: "autres",
-      skills: ["Git", "GitHub", "Linux", "C++", "C", "Assembly", "VSCode"],
+      skills: ["Git", "GitHub", "Linux", "C++", "C", "Raspberry pi 5", ],
       bgColor: "from-slate-600 to-slate-800"
     }
   };
