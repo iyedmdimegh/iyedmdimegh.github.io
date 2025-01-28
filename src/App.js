@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import RecentUpdates from './components/RecentUpdates';
 import Skills from './components/Skills';
 import Connect from './components/Connect';
+import Awards from './components/Awards';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           <Projects />
           <RecentUpdates />
           <Skills />
+          <Awards />
           <Connect />
         </main>
         <Footer />

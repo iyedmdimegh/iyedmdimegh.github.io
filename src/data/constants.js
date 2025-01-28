@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export const name = "Portfolio"
 export const description = "A simple portfolio website"
-export const BASE_URL = "https://iyedmdimegh.github.io/newportfolio/"
+export const BASE_URL = "https://iyedmdimegh.github.io/"
 export const pfp = "/assets/images/pfp/pfp.jpg"
 export const RESUME_ENDPOINT = "resume.pdf"
 // English pack 
@@ -185,6 +185,44 @@ export const footer_component_content = {
 
 }
 
+export const awards_component_content = {
+  awards: [
+    {
+      title: "1st Prize at TSYP Chess Coach Challenge",
+      description: 
+        "Secured 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Led the development of the INSAT Chess Coach Robot, an innovative robotic system designed to teach and interact with chess players.",
+      prize: "1st Prize",
+    },
+    {
+      title: "2nd Prize at TSYP SMARTSHIELD Challenge",
+      description: 
+        "Achieved 2nd place in the national TSYP Chess Coach Challenge, an IEEE Tunisia Section event with participation from over 20 universities. Contributed to developing the INSAT Chess Coach Robot, a cutting-edge robotic chess trainer.",
+      prize: "2nd Prize",
+    },
+    {
+      title: "3rd Place at AINS Hackathon",
+      description: 
+        "Won 3rd place in the AINS Hackathon by competing against 20 teams nationwide. Developed an AI-driven agent capable of planning and scheduling learning tasks using Google Calendar API, dynamically adjusting for user behavior.",
+      prize: "3rd Prize",
+    },
+    {
+      title: "1st Prize at Enicar Coding Arena",
+      description: 
+        "Earned 1st place in the Enicar Coding Arena, a competitive programming contest. My team outperformed others by solving the highest number of challenging algorithmic problems.",
+      prize: "1st Prize",
+    },
+    {
+      title: "1st Prize at Enicar Coding Arena",
+      description: 
+        "Earned 1st place in the Enicar Coding Arena, a competitive programming contest. My team outperformed others by solving the highest number of challenging algorithmic problems.",
+      prize: "1st Prize",
+    },
+  ],
+};
+
+
+
+
 
 
 // French pack 
@@ -358,6 +396,42 @@ export const footer_component_content_french = {
   projects : "Projets",
   skills : "Compétences",
   recentUpdates : "Mises à jour récentes",
+};
+
+
+export const awards_component_content_french = {
+  awards: [
+    {
+      title: "1er Prix au TSYP Chess Coach Challenge",
+      description: 
+        "Remporté la 1ère place au TSYP Chess Coach Challenge, une compétition nationale organisée par la section IEEE Tunisie, avec la participation de 20 universités. Dirigé le développement de l'INSAT Chess Coach Robot, un système robotique innovant conçu pour enseigner et interagir avec les joueurs d'échecs.",
+      prize: "1er Prix",
+    },
+    {
+      title: "2e Prix au TSYP Chess Coach Challenge",
+      description: 
+        "Obtenu la 2e place au TSYP Chess Coach Challenge, une compétition nationale organisée par la section IEEE Tunisie avec la participation de plus de 20 universités. Contribué au développement de l'INSAT Chess Coach Robot, un entraîneur d'échecs robotisé de pointe.",
+      prize: "2e Prix",
+    },
+    {
+      title: "3e Place au Hackathon AINS",
+      description: 
+        "Classé 3e au Hackathon AINS après avoir affronté 20 équipes de tout le pays. Développé un agent basé sur l’IA capable de planifier et de programmer des tâches d’apprentissage à l’aide de l’API Google Calendar, en s’adaptant dynamiquement au comportement des utilisateurs.",
+      prize: "3e Prix",
+    },
+    {
+      title: "1er Prix à l’Enicar Coding Arena",
+      description: 
+        "Remporté la 1ère place à l’Enicar Coding Arena, un concours de programmation compétitive. Mon équipe s’est distinguée en résolvant le plus grand nombre de problèmes algorithmiques complexes.",
+      prize: "1er Prix",
+    },
+    {
+      title: "1er Prix à l’Enicar Coding Arena",
+      description: 
+        "Remporté la 1ère place à l’Enicar Coding Arena, un concours de programmation compétitive. Mon équipe s’est distinguée en résolvant le plus grand nombre de problèmes algorithmiques complexes.",
+      prize: "1er Prix",
+    },
+  ],
 };
 
 
