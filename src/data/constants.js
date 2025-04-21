@@ -5,7 +5,7 @@ export const description = "A simple portfolio website"
 export const BASE_URL = "https://iyedmdimegh.github.io/"
 export const pfp = "/assets/images/pfp/pfp.jpg"
 export const RESUME_ENDPOINT = "resume.pdf"
-export const LOGO = "/assets/images/pfp/logo.png"
+export const LOGO = "/assets/images/pfp/logo.jpg"
 // English pack 
 
 export const projects = [
@@ -37,7 +37,7 @@ export const projects = [
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Computer Vision"],
     "youtubeLink": "https://youtu.be/odGnHj1qUEk",
     "githubLink": "",
-    "documentLink": `${BASE_URL}assets/documents/papers/chessTechnicalPaper.pdf`
+    "documentLink": `${BASE_URL}assets/documents/papers/chess-coarch-research-paper.pdf`
   },
   {
     "id": 4,
