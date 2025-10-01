@@ -32,6 +32,9 @@ function About() {
               <span className="absolute right-[-4px] w-[4px] h-8 sm:h-10 lg:h-12 bg-orange-500 animate-blink"></span>
             </span>
           </h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
+            {content.description}
+          </p>
           <button
             className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition-colors duration-300"
             onClick={() => window.open(`${BASE_URL + RESUME_ENDPOINT}`, '_blank')}

@@ -161,6 +161,7 @@ export const about_components_content = {
   animated1: "Iyed Mdimegh",
   animated2: "Software Engineering Student",
   animated3: "AI enthusiast",
+  description: "I’m a 22-year-old Software Engineering student at INSAT, Tunisia, specializing in software development with a strong passion for AI. I enjoy solving complex problems and exploring innovative technologies to drive impactful solutions.",
   download: "Download Resume",
   pfp : "/assets/images/pfp/pfp.jpg"
 }
@@ -198,29 +199,79 @@ export const footer_component_content = {
 
 }
 
+export const timeline_component_content = {
+  title: "Career Timeline",
+};
+
+export const timelineData = [
+  {
+    period: "July 2025 - September 2025",
+    position: "Software Engineering Intern - SAP Joule Integration",
+    company: "Free2Move",
+    location: "Tunis, Tunisia",
+    achievements: [
+      "Developed AI-driven automation using SAP Joule to optimize business processes in SAP S/4HANA.",
+      "Created custom agents to automate tasks like report generation, improving efficiency and decision-making."
+    ],
+    tags: ["SAP Joule", "AI", "S/4HANA", "Automation"]
+  },
+  {
+    period: "June 2025 - July 2025",
+    position: "Software Engineering Intern",
+    company: "Vectors",
+    location: "Tunis, Tunisia",
+    achievements: [
+      "Rebuilt \"Jira Comment Toolkit\" using modern technologies, replacing legacy code.",
+      "Developed an Atlassian app to manage and classify Jira comments with AI-driven labeling for improved workflow."
+    ],
+    tags: ["Jira", "Atlassian", "AI", "Modern Stack"]
+  },
+  {
+    period: "July 2024 - September 2024",
+    position: "Software Engineer",
+    company: "Pixemantic",
+    location: "Tunis, Tunisia",
+    achievements: [
+      "Leveraged advanced AI and deep reinforcement learning to optimize 3D item arrangement, enhancing space utilization and efficiency.",
+      "Transformed the solution into a full-stack web application using Django and React."
+    ],
+    tags: ["AI", "Deep Learning", "Django", "React", "3D"]
+  },
+  {
+    period: "June 2024 - July 2024",
+    position: "Software Developer",
+    company: "PROXYM group",
+    location: "Sousse, Tunisia",
+    achievements: [
+      "Created a social media web app from scratch using MERN stack and socket.io."
+    ],
+    tags: ["MERN", "Socket.io", "Real-time", "Full Stack"]
+  }
+];
+
 export const awards_component_content = {
   awards: [
     {
       title: "1st Prize at TSYP Chess Coach Challenge",
-      description: 
+      description:
         "Secured 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Led the development of the INSAT Chess Coach Robot, an innovative robotic system designed to teach and interact with chess players.",
       prize: "1st Prize",
     },
     {
       title: "2nd Prize at TSYP SMARTSHIELD Challenge",
-      description: 
+      description:
         "Achieved 2nd place in the national TSYP Chess Coach Challenge, an IEEE Tunisia Section event with participation from over 20 universities. Contributed to developing the INSAT Chess Coach Robot, a cutting-edge robotic chess trainer.",
       prize: "2nd Prize",
     },
     {
       title: "3rd Place at AINS Hackathon",
-      description: 
+      description:
         "Won 3rd place in the AINS Hackathon by competing against 20 teams nationwide. Developed an AI-driven agent capable of planning and scheduling learning tasks using Google Calendar API, dynamically adjusting for user behavior.",
       prize: "3rd Prize",
     },
     {
       title: "1st Prize at Enicar Coding Arena",
-      description: 
+      description:
         "Earned 1st place in the Enicar Coding Arena, a competitive programming contest. My team outperformed others by solving the highest number of challenging algorithmic problems.",
       prize: "1st Prize",
     },
@@ -228,7 +279,7 @@ export const awards_component_content = {
       title: "1st Place at ATCCM National Mathematics Contest",
       description: "Achieved first place nationally and qualified for the international competition held in Paris.",
       prize: "1st Prize"
-    }    
+    }
   ],
 };
 
@@ -389,6 +440,7 @@ export const about_components_content_french = {
   animated1: "Iyed Mdimegh",
   animated2: "Étudiant en ingénierie logicielle",
   animated3: "Passionné d'IA",
+  description: "Je suis étudiant en Génie Logiciel à l’INSAT, Tunisie, âgé de 22 ans, avec une passion pour l'Intelligence Artificielle. J'aime résoudre des problèmes complexes et explorer des technologies innovantes pour créer des solutions efficaces.",
   download: "Télécharger le CV",
   pfp : "/assets/images/pfp/pfp.jpg"
 };
@@ -423,30 +475,80 @@ export const footer_component_content_french = {
 };
 
 
+export const timeline_component_content_french = {
+  title: "Parcours Professionnel",
+};
+
+export const timelineData_french = [
+  {
+    period: "Juillet 2025 - Septembre 2025",
+    position: "Stagiaire en Ingénierie Logicielle - Intégration SAP Joule",
+    company: "Free2Move",
+    location: "Tunis, Tunisie",
+    achievements: [
+      "Développement d'automatisation basée sur l'IA avec SAP Joule pour optimiser les processus métier dans SAP S/4HANA.",
+      "Création d'agents personnalisés pour automatiser des tâches comme la génération de rapports, améliorant l'efficacité et la prise de décision."
+    ],
+    tags: ["SAP Joule", "IA", "S/4HANA", "Automatisation"]
+  },
+  {
+    period: "Juin 2025 - Juillet 2025",
+    position: "Stagiaire en Ingénierie Logicielle",
+    company: "Vectors",
+    location: "Tunis, Tunisie",
+    achievements: [
+      "Reconstruction du \"Jira Comment Toolkit\" avec des technologies modernes, remplaçant le code legacy.",
+      "Développement d'une application Atlassian pour gérer et classifier les commentaires Jira avec étiquetage basé sur l'IA pour améliorer le flux de travail."
+    ],
+    tags: ["Jira", "Atlassian", "IA", "Stack Moderne"]
+  },
+  {
+    period: "Juillet 2024 - Septembre 2024",
+    position: "Ingénieur Logiciel",
+    company: "Pixemantic",
+    location: "Tunis, Tunisie",
+    achievements: [
+      "Utilisation de l'IA avancée et de l'apprentissage par renforcement profond pour optimiser l'agencement d'objets 3D, améliorant l'utilisation de l'espace et l'efficacité.",
+      "Transformation de la solution en application web full-stack utilisant Django et React."
+    ],
+    tags: ["IA", "Deep Learning", "Django", "React", "3D"]
+  },
+  {
+    period: "Juin 2024 - Juillet 2024",
+    position: "Développeur Logiciel",
+    company: "PROXYM group",
+    location: "Sousse, Tunisie",
+    achievements: [
+      "Création d'une application web de réseau social à partir de zéro en utilisant la pile MERN et socket.io."
+    ],
+    tags: ["MERN", "Socket.io", "Temps réel", "Full Stack"]
+  }
+];
+
 export const awards_component_content_french = {
   awards: [
     {
       title: "1er Prix au TSYP Chess Coach Challenge",
-      description: 
+      description:
         "Remporté la 1ère place au TSYP Chess Coach Challenge, une compétition nationale organisée par la section IEEE Tunisie, avec la participation de 20 universités. Dirigé le développement de l'INSAT Chess Coach Robot, un système robotique innovant conçu pour enseigner et interagir avec les joueurs d'échecs.",
       prize: "1er Prix",
     },
     {
       title: "2e Prix au TSYP Chess Coach Challenge",
-      description: 
+      description:
         "Obtenu la 2e place au TSYP Chess Coach Challenge, une compétition nationale organisée par la section IEEE Tunisie avec la participation de plus de 20 universités. Contribué au développement de l'INSAT Chess Coach Robot, un entraîneur d'échecs robotisé de pointe.",
       prize: "2e Prix",
     },
     {
       title: "3e Place au Hackathon AINS",
-      description: 
-        "Classé 3e au Hackathon AINS après avoir affronté 20 équipes de tout le pays. Développé un agent basé sur l’IA capable de planifier et de programmer des tâches d’apprentissage à l’aide de l’API Google Calendar, en s’adaptant dynamiquement au comportement des utilisateurs.",
+      description:
+        "Classé 3e au Hackathon AINS après avoir affronté 20 équipes de tout le pays. Développé un agent basé sur l'IA capable de planifier et de programmer des tâches d'apprentissage à l'aide de l'API Google Calendar, en s'adaptant dynamiquement au comportement des utilisateurs.",
       prize: "3e Prix",
     },
     {
-      title: "1er Prix à l’Enicar Coding Arena",
-      description: 
-        "Remporté la 1ère place à l’Enicar Coding Arena, un concours de programmation compétitive. Mon équipe s’est distinguée en résolvant le plus grand nombre de problèmes algorithmiques complexes.",
+      title: "1er Prix à l'Enicar Coding Arena",
+      description:
+        "Remporté la 1ère place à l'Enicar Coding Arena, un concours de programmation compétitive. Mon équipe s'est distinguée en résolvant le plus grand nombre de problèmes algorithmiques complexes.",
       prize: "1er Prix",
     },
     {
@@ -454,7 +556,7 @@ export const awards_component_content_french = {
       description: "Remporté la première place au niveau national et qualifié pour le concours international à Paris.",
       prize: "1er Prix"
     }
-    
+
   ],
 };
 
