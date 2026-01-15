@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import About from './components/About';
+import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import RecentUpdates from './components/RecentUpdates';
@@ -26,6 +27,7 @@ export default function App() {
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <About />
+          <Timeline />
           <Projects />
           <RecentUpdates />
           <Skills />
