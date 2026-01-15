@@ -79,6 +79,7 @@ export const recentUpdates = [
     title: "Won 1st Prize at TSYP Chess Coach Challenge",
     description: "Along with my team, we secured the 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Further description of the award-winning project is prvided in the projects section."
   },
+  
   // {
   //   id: 2,
   //   image: "/assets/images/updates/vctaPic.jpg",
@@ -86,9 +87,15 @@ export const recentUpdates = [
   //   description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
   // },
   {
+    id: 2,
+    image: "/assets/images/updates/smc-vienna.jpg",
+    title: "Attended IEEE SMC 2025 Conference & BR41N.IO BCI Hackathon in Vienna",
+    description: "I represented Tunisia at the IEEE SMC 2025 Conference in Vienna, where I presented my research, connected with leading academics and industry experts (including NASA representatives), and explored cutting-edge innovations in Brain-Computer Interfaces. I also participated in the BR41N.IO BCI Hackathon, developing a neurotechnology system that adapts music volume based on EEG and fNIRS signals."
+  },
+  {
     id: 3,
     image: "/assets/images/updates/vctaPic.jpg",
-    title: "I am currently Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
+    title: "Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
     description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
   },
   {
@@ -113,19 +120,19 @@ export const recentUpdates = [
 ];
 
 export const skillCategories = {
-    webDevelopment: {
+    SoftwareDevelopment: {
       title: "web development",
       skills: ["React.js", "Node.js", "Django", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL","HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", ],
       bgColor: "from-purple-900 to-red-800"
     },
     ai: {
       title: "AI",
-      skills: ["Deep Reinforcement Learning", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Computer Vision"],
+      skills: ["Deep Reinforcement Learning", "RAG","CNN","Scikit-Learn","Matplotlib", "Python", "Tensorflow", "Keras", "XGBoost", "Django",  "Pandas", "Numpy", "Computer Vision"],
       bgColor: "from-teal-600 to-teal-900"
     },
     other: {
       title: "other",
-      skills: ["Git", "GitHub", "Linux", "C++", "C", "Raspberry pi 5", ],
+      skills: ["Docker", "Jira", "SAP Joule", "Git", "GitHub", "Linux", "C++", "C", "Raspberry pi 5", ],
       bgColor: "from-slate-600 to-slate-800"
     }
   };
@@ -316,6 +323,12 @@ export const recentUpdates_french = [
   //   "description": "Avec mon équipe, nous avons remporté la 1ère place au défi national Coach d'Échecs TSYP, en compétition contre des équipes de 20 universités à travers la Tunisie. Une description détaillée du projet primé est disponible dans la section des projets."
   // },
   {
+    id: 2,
+    image: "/assets/images/updates/smc-vienna.jpg",
+    title: "Participation à la Conférence IEEE SMC 2025 & au Hackathon BR41N.IO à Vienne",
+    description: "J'ai représenté la Tunisie lors de la conférence IEEE SMC 2025 à Vienne, où j’ai présenté mes travaux, échangé avec des chercheurs et experts industriels (dont des représentants de la NASA) et découvert des innovations de pointe en interfaces cerveau-ordinateur. J’ai également participé au hackathon BR41N.IO, en développant un système neurotechnologique qui adapte le volume de la musique selon l’état mental via EEG et fNIRS."
+  },
+  {
     id: 3,
     image: "/assets/images/updates/vctaPic.jpg",
     title: "Je suis actuellement Vice-Président, Activités Techniques au IEEE INSAT Computer Society Chapter",
@@ -342,22 +355,22 @@ export const recentUpdates_french = [
 ];
 
 export const skillCategories_french = {
-    webDevelopment: {
-      title: "Développement web",
-      skills: ["React.js", "Node.js", "Django", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL","HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", ],
-      bgColor: "from-purple-900 to-red-800"
-    },
-    ai: {
-      title: "IA",
-      skills: ["Deep Reinforcement Learning", "Python", "Tensorflow", "Keras", "XGBoost", "Django", "Scilearn", "Pandas", "Numpy", "Computer Vision"],
-      bgColor: "from-teal-600 to-teal-900"
-    },
-    other: {
-      title: "autres",
-      skills: ["Git", "GitHub", "Linux", "C++", "C", "Raspberry pi 5", ],
-      bgColor: "from-slate-600 to-slate-800"
-    }
-  };
+  SoftwareDevelopment: {
+    title: "Développement web",
+    skills: ["React.js", "Node.js", "Django", "Express.js", "PHP", "Symfony", "Java", "MongoDB", "PostgreSQL", "Oracle SQL", "HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript"],
+    bgColor: "from-purple-900 to-red-800"
+  },
+  ai: {
+    title: "IA",
+    skills: ["Deep Reinforcement Learning", "RAG", "CNN", "Scikit-Learn", "Matplotlib", "Python", "TensorFlow", "Keras", "XGBoost", "Django", "Pandas", "NumPy", "Computer Vision"],
+    bgColor: "from-teal-600 to-teal-900"
+  },
+  other: {
+    title: "Autres",
+    skills: ["Docker", "Jira", "SAP Joule", "Git", "GitHub", "Linux", "C++", "C", "Raspberry Pi 5"],
+    bgColor: "from-slate-600 to-slate-800"
+  }
+};
 
 export const socialLinks_french = [
     {
