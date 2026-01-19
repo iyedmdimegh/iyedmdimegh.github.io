@@ -89,8 +89,8 @@ export const recentUpdates = [
   {
     id: 2,
     image: "/assets/images/updates/smc-vienna.jpg",
-    title: "Attended IEEE SMC 2025 Conference & BR41N.IO BCI Hackathon in Vienna",
-    description: "I represented Tunisia at the IEEE SMC 2025 Conference in Vienna, where I presented my research, connected with leading academics and industry experts (including NASA representatives), and explored cutting-edge innovations in Brain-Computer Interfaces. I also participated in the BR41N.IO BCI Hackathon, developing a neurotechnology system that adapts music volume based on EEG and fNIRS signals."
+    title: "Prented work at IEEE SMC 2025 Conference & BR41N.IO BCI Hackathon in Vienna",
+    description: "I represented Tunisia at the IEEE SMC 2025 Conference in Vienna, where I presented my research with my co-authors, connected with leading academics and industry experts, and explored cutting-edge innovations in Brain-Computer Interfaces. I also participated in the BR41N.IO BCI Hackathon, developing a neurotechnology system that adapts music volume based on EEG and fNIRS signals."
   },
   {
     id: 3,
@@ -377,7 +377,7 @@ export const recentUpdates_french = [
     id: 2,
     image: "/assets/images/updates/smc-vienna.jpg",
     title: "Participation à la Conférence IEEE SMC 2025 & au Hackathon BR41N.IO à Vienne",
-    description: "J'ai représenté la Tunisie lors de la conférence IEEE SMC 2025 à Vienne, où j’ai présenté mes travaux, échangé avec des chercheurs et experts industriels (dont des représentants de la NASA) et découvert des innovations de pointe en interfaces cerveau-ordinateur. J’ai également participé au hackathon BR41N.IO, en développant un système neurotechnologique qui adapte le volume de la musique selon l’état mental via EEG et fNIRS."
+    description: "J'ai représenté la Tunisie lors de la conférence IEEE SMC 2025 à Vienne, où j’ai présenté mes travaux avec mes co-auteurs, échangé avec des chercheurs et experts industriels et découvert des innovations de pointe en interfaces cerveau-ordinateur. J’ai également participé au hackathon BR41N.IO, en développant un système neurotechnologique qui adapte le volume de la musique selon l’état mental via EEG et fNIRS."
   },
   {
     id: 3,
