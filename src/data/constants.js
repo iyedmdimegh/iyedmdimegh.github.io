@@ -37,7 +37,7 @@ export const projects = [
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Computer Vision"],
     "youtubeLink": "https://youtu.be/odGnHj1qUEk",
     "githubLink": "",
-    "documentLink": `${BASE_URL}assets/documents/papers/chess-coarch-research-paper.pdf`
+    "documentLink": "https://ieeexplore.ieee.org/document/11342836"
   },
   {
     "id": 4,
@@ -75,6 +75,12 @@ export const projects = [
 export const recentUpdates = [
   {
     id: 1,
+    image: "/assets/images/updates/gnnpic.jpg",
+    title: "Hosted Workshop on Graph Neural Networks at INSAT",
+    description: "Led a technical workshop on Graph Neural Networks (GNNs) at INSAT, introducing students to advanced deep learning architectures for graph-structured data. Covered key concepts including message passing, graph convolutions, and practical applications in recommendation systems and molecular modeling."
+  },
+  {
+    id: 2,
     image: "/assets/images/updates/tsypchesspicceremonie.jpg",
     title: "Won 1st Prize at TSYP Chess Coach Challenge",
     description: "Along with my team, we secured the 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Further description of the award-winning project is prvided in the projects section."
@@ -87,31 +93,31 @@ export const recentUpdates = [
   //   description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
   // },
   {
-    id: 2,
+    id: 3,
     image: "/assets/images/updates/smc-vienna.jpg",
     title: "Prented work at IEEE SMC 2025 Conference & BR41N.IO BCI Hackathon in Vienna",
     description: "I represented Tunisia at the IEEE SMC 2025 Conference in Vienna, where I presented my research with my co-authors, connected with leading academics and industry experts, and explored cutting-edge innovations in Brain-Computer Interfaces. I also participated in the BR41N.IO BCI Hackathon, developing a neurotechnology system that adapts music volume based on EEG and fNIRS signals."
   },
   {
-    id: 3,
+    id: 4,
     image: "/assets/images/updates/vctaPic.jpg",
     title: "Vice Chair, Technical Activities at IEEE INSAT Computer Society Chapter",
     description: "As Vice Chair and responsable for Technical Activities, I lead and manage innovative technical projects, develop the annual plan, and organize impactful workshops to enhance the skills and learning opportunities of our 250+ members."
   },
   {
-    id: 4,
+    id: 5,
     image: "/assets/images/updates/AINS-HACK.jpg",
     title: "3rd Place at AINS HACKATHON (Artificial Intelligence National Summit)",
     description: "Our team competed against 20 others with a project focused on AI agents, earning us the 3rd prize."
   },
   {
-    id: 5,
+    id: 6,
     image: "/assets/images/updates/project-image01.jpg",
     title: "1st prize at Enicar Coding Arena - Competitive Programming Contest",
     description: "Along with my team I competed at a Competitive Programming Contest and solved the greatest number of problems."
   },
   {
-    id: 6,
+    id: 7,
     image: "/assets/images/updates/hackathon.jpg",
     title: `Organizing Commitee President of the Hackathon "Hack for good 2.0"`,
     description: "Along with team I organized a hackathon that held 140 participants and attracted many students across the country to contribute to this event with outstanding projects."
@@ -326,7 +332,7 @@ export const projects_french = [
     "technologies": ["Stockfish", "Raspberry Pi 4", "Arduino", "YOLOv8", "Vision par ordinateur"],
     "youtubeLink": "https://youtu.be/odGnHj1qUEk",
     "githubLink": "",
-    "documentLink": `${BASE_URL}assets/documents/papers/chessTechnicalPaper.pdf`
+    "documentLink": "https://ieeexplore.ieee.org/document/11342836"
   },
   {
     "id": 4,
@@ -363,6 +369,12 @@ export const projects_french = [
 export const recentUpdates_french = [
   {
     "id": 1,
+    "image": "/assets/images/updates/gnnpic.jpg",
+    "title": "Animation d'un Atelier sur les Réseaux de Neurones Graphiques à l'INSAT",
+    "description": "J'ai dirigé un atelier technique sur les Réseaux de Neurones Graphiques (GNNs) à l'INSAT, initiant les étudiants aux architectures avancées d'apprentissage profond pour les données structurées en graphes. Couverture des concepts clés incluant le passage de messages, les convolutions de graphes et les applications pratiques dans les systèmes de recommandation et la modélisation moléculaire."
+  },
+  {
+    "id": 2,
     "image": "/assets/images/updates/tsypchesspicceremonie.jpg",
     "title": "1er Prix au Défi Coach d'Échecs TSYP",
     "description": "Avec mon équipe, nous avons remporté la 1ère place au défi national Coach d'Échecs TSYP, en compétition contre des équipes de 20 universités à travers la Tunisie. Une description détaillée du projet primé est disponible dans la section des projets."
@@ -374,31 +386,31 @@ export const recentUpdates_french = [
   //   "description": "Avec mon équipe, nous avons remporté la 1ère place au défi national Coach d'Échecs TSYP, en compétition contre des équipes de 20 universités à travers la Tunisie. Une description détaillée du projet primé est disponible dans la section des projets."
   // },
   {
-    id: 2,
+    id: 3,
     image: "/assets/images/updates/smc-vienna.jpg",
     title: "Participation à la Conférence IEEE SMC 2025 & au Hackathon BR41N.IO à Vienne",
     description: "J'ai représenté la Tunisie lors de la conférence IEEE SMC 2025 à Vienne, où j’ai présenté mes travaux avec mes co-auteurs, échangé avec des chercheurs et experts industriels et découvert des innovations de pointe en interfaces cerveau-ordinateur. J’ai également participé au hackathon BR41N.IO, en développant un système neurotechnologique qui adapte le volume de la musique selon l’état mental via EEG et fNIRS."
   },
   {
-    id: 3,
+    id: 4,
     image: "/assets/images/updates/vctaPic.jpg",
     title: "Je suis actuellement Vice-Président, Activités Techniques au IEEE INSAT Computer Society Chapter",
     description: "En tant que Vice-Président et responsable des Activités Techniques, je dirige et gère des projets techniques innovants, développe le plan annuel et organise des ateliers impactants pour améliorer les compétences et les opportunités d'apprentissage de nos 250+ membres."
   },
   {
-    id: 4,
+    id: 5,
     image: "/assets/images/updates/AINS-HACK.jpg",
     title: "3ème place au HACKATHON AINS (Sommet National d'Intelligence Artificielle)",
     description: "Notre équipe a affronté 20 autres avec un projet axé sur les agents IA, nous valant le 3ème prix."
   },
   {
-    id: 5,
+    id: 6,
     image: "/assets/images/updates/project-image01.jpg",
     title: "1er prix au Enicar Coding Arena - Concours de Programmation Compétitive",
     description: "Avec mon équipe, j'ai participé à un concours de programmation compétitive et résolu le plus grand nombre de problèmes."
   },
   {
-    id: 6,
+    id: 7,
     image: "/assets/images/updates/hackathon.jpg",
     title: `Président du Comité Organisateur du Hackathon \"Hack for good 2.0\"`,
     description: "Avec mon équipe, j'ai organisé un hackathon qui a rassemblé 140 participants et attiré de nombreux étudiants à travers le pays pour contribuer à cet événement avec des projets exceptionnels."
