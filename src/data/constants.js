@@ -85,7 +85,7 @@ export const projects = [
 export const recentUpdates = [
   {
     id: 8,
-    image: "/assets/images/updates/nrtf.jpeg",
+    image: "/assets/images/updates/nrtf.jpg",
     title: "Thrilled to announce that my team won 1st Prize at the National Re·Tech Fusion competition!",
     description: "We built an IoT and edge computing platform for Kilani Groupe to optimize industrial energy consumption. Organized by the IEEE PES × PELS INSAT Joint Chapter."
   },
@@ -411,7 +411,7 @@ export const projects_french = [
 export const recentUpdates_french = [
   {
     "id": 8,
-    "image": "/assets/images/updates/nrtf.jpeg",
+    "image": "/assets/images/updates/nrtf.jpg",
     "title": "Ravi d'annoncer que mon équipe a remporté le 1er Prix au concours National Re·Tech Fusion !",
     "description": "Nous avons développé une plateforme IoT et edge computing pour Kilani Groupe afin d'optimiser la consommation énergétique industrielle. Organisé par le IEEE PES × PELS INSAT Joint Chapter."
   },
