@@ -10,6 +10,16 @@ export const LOGO = "/assets/images/pfp/logo.jpg"
 
 export const projects = [
   {
+    "id": 8,
+    "title": "Sustainable Deep Learning & Frugal AI Framework",
+    "description": "Co-engineered a distributed model-parallel architecture for the Introvert pipeline using PyTorch RPC and Docker, reducing CO2 emissions by 42.6% with zero accuracy degradation. Implemented an advanced optimization pipeline featuring mixed-precision training (AMP), torch.compile, and asynchronous data loading, accelerating training time by 33.7%. Formulated a novel composite frugality metric based on the Analytic Hierarchy Process (AHP) to comprehensively evaluate AI deployments across energy, memory, FLOPs, and predictive accuracy.",
+    "images": [],
+    "technologies": ["PyTorch", "Docker", "Distributed Systems", "Frugal AI", "Deep Learning", "Python"],
+    "youtubeLink": "",
+    "githubLink": "",
+    "documentLink": ""
+  },
+  {
     "id": 1,
     "title": "AI-Powered 3D Packing Software",
     "description": "This Project delivers substantial volume and cost savings by efficiently packing 3D boxes within containers. It ensures optimal space utilization and minimizes waste, offering a powerful solution for logistics, warehousing, and shipping challenges. Experience precision and efficiency with our advanced packing algorithms.",
@@ -218,6 +228,16 @@ export const timeline_component_content = {
 
 export const timelineData = [
   {
+    period: "April 2026 - Present",
+    position: "Software Engineer",
+    company: "Freelance",
+    location: "",
+    achievements: [
+      "Engineered a scalable conferences management platform with end-to-end workflows: registration, submissions, and secure payment processing."
+    ],
+    tags: ["Full-Stack Web Development", "Payment Integration", "Scalable Architecture"]
+  },
+  {
     period: "July 2025 - September 2025",
     position: "Software Engineering Intern - SAP Joule Integration",
     company: "Free2Move",
@@ -304,6 +324,16 @@ export const awards_component_content = {
 // French pack 
 
 export const projects_french = [
+  {
+    "id": 8,
+    "title": "Framework d'Apprentissage Profond Durable et d'IA Frugale",
+    "description": "Co-conçu une architecture parallèle distribuée pour le pipeline Introvert en utilisant PyTorch RPC et Docker, réduisant les émissions de CO2 de 42,6% sans aucune dégradation de la précision. Implémenté un pipeline d'optimisation avancé comprenant l'entraînement en précision mixte (AMP), torch.compile et le chargement asynchrone des données, accélérant le temps d'entraînement de 33,7% et réduisant les émissions de 83,2%. Formulé une nouvelle métrique composite de frugalité basée sur le Processus de Hiérarchie Analytique (AHP) pour évaluer de manière complète les déploiements d'IA en termes d'énergie, mémoire, FLOPs et précision prédictive.",
+    "images": [],
+    "technologies": ["PyTorch", "Docker", "Systèmes Distribués", "IA Frugale", "Deep Learning", "Python"],
+    "youtubeLink": "",
+    "githubLink": "",
+    "documentLink": ""
+  },
   {
     "id": 1,
     "title": "Logiciel d'optimisation d'emballage 3D basé sur l'IA",
@@ -505,6 +535,16 @@ export const timeline_component_content_french = {
 };
 
 export const timelineData_french = [
+  {
+    period: "Avril 2026 - Présent",
+    position: "Ingénieur Logiciel",
+    company: "Freelance",
+    location: "",
+    achievements: [
+      "Conçu et développé une plateforme scalable de gestion de conférences avec des workflows de bout en bout : inscriptions, soumissions et traitement sécurisé des paiements."
+    ],
+    tags: ["Développement Web Full-Stack", "Intégration de Paiement", "Architecture Scalable"]
+  },
   {
     period: "Juillet 2025 - Septembre 2025",
     position: "Stagiaire en Ingénierie Logicielle - Intégration SAP Joule",
