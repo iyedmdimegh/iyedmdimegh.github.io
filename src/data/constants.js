@@ -13,7 +13,7 @@ export const projects = [
     "id": 8,
     "title": "Sustainable Deep Learning & Frugal AI Framework",
     "description": "Co-engineered a distributed model-parallel architecture for the Introvert pipeline using PyTorch RPC and Docker, reducing CO2 emissions by 42.6% with zero accuracy degradation. Implemented an advanced optimization pipeline featuring mixed-precision training (AMP), torch.compile, and asynchronous data loading, accelerating training time by 33.7%. Formulated a novel composite frugality metric based on the Analytic Hierarchy Process (AHP) to comprehensively evaluate AI deployments across energy, memory, FLOPs, and predictive accuracy.",
-    "images": [],
+    "images": ["/assets/images/project/introvert/introvert-0.png", "/assets/images/project/introvert/introvert-1.png"],
     "technologies": ["PyTorch", "Docker", "Distributed Systems", "Frugal AI", "Deep Learning", "Python"],
     "youtubeLink": "",
     "githubLink": "",
@@ -84,6 +84,12 @@ export const projects = [
 
 export const recentUpdates = [
   {
+    id: 8,
+    image: "/assets/images/updates/nrtf.jpeg",
+    title: "Thrilled to announce that my team won 1st Prize at the National Re·Tech Fusion competition!",
+    description: "We built an IoT and edge computing platform for Kilani Groupe to optimize industrial energy consumption. Organized by the IEEE PES × PELS INSAT Joint Chapter."
+  },
+  {
     id: 1,
     image: "/assets/images/updates/gnnpic.jpg",
     title: "Hosted Workshop on Graph Neural Networks at INSAT",
@@ -120,12 +126,12 @@ export const recentUpdates = [
     title: "3rd Place at AINS HACKATHON (Artificial Intelligence National Summit)",
     description: "Our team competed against 20 others with a project focused on AI agents, earning us the 3rd prize."
   },
-  {
-    id: 6,
-    image: "/assets/images/updates/project-image01.jpg",
-    title: "1st prize at Enicar Coding Arena - Competitive Programming Contest",
-    description: "Along with my team I competed at a Competitive Programming Contest and solved the greatest number of problems."
-  },
+  // {
+  //   id: 6,
+  //   image: "/assets/images/updates/project-image01.jpg",
+  //   title: "1st prize at Enicar Coding Arena - Competitive Programming Contest",
+  //   description: "Along with my team I competed at a Competitive Programming Contest and solved the greatest number of problems."
+  // },
   {
     id: 7,
     image: "/assets/images/updates/hackathon.jpg",
@@ -285,6 +291,12 @@ export const timelineData = [
 export const awards_component_content = {
   awards: [
     {
+      title: "1st Prize - National Re·Tech Fusion",
+      description:
+        "Won 1st prize at the National Re·Tech Fusion competition, organized by the IEEE PES × PELS INSAT Joint Chapter, centered on a real industrial challenge from Kilani Groupe. Built an industrial energy intelligence platform combining IoT, edge computing, and data analytics to monitor and optimize factory energy consumption. Also won the Best Art Award at the same event.",
+      prize: "1st Prize",
+    },
+    {
       title: "1st Prize at TSYP Chess Coach Challenge",
       description:
         "Secured 1st place in the national TSYP Chess Coach Challenge, competing against teams from 20 universities across Tunisia. Led the development of the INSAT Chess Coach Robot, an innovative robotic system designed to teach and interact with chess players.",
@@ -328,7 +340,7 @@ export const projects_french = [
     "id": 8,
     "title": "Framework d'Apprentissage Profond Durable et d'IA Frugale",
     "description": "Co-conçu une architecture parallèle distribuée pour le pipeline Introvert en utilisant PyTorch RPC et Docker, réduisant les émissions de CO2 de 42,6% sans aucune dégradation de la précision. Implémenté un pipeline d'optimisation avancé comprenant l'entraînement en précision mixte (AMP), torch.compile et le chargement asynchrone des données, accélérant le temps d'entraînement de 33,7% et réduisant les émissions de 83,2%. Formulé une nouvelle métrique composite de frugalité basée sur le Processus de Hiérarchie Analytique (AHP) pour évaluer de manière complète les déploiements d'IA en termes d'énergie, mémoire, FLOPs et précision prédictive.",
-    "images": [],
+    "images": ["/assets/images/project/introvert/introvert-0.png", "/assets/images/project/introvert/introvert-1.png"],
     "technologies": ["PyTorch", "Docker", "Systèmes Distribués", "IA Frugale", "Deep Learning", "Python"],
     "youtubeLink": "",
     "githubLink": "",
@@ -398,6 +410,12 @@ export const projects_french = [
 
 export const recentUpdates_french = [
   {
+    "id": 8,
+    "image": "/assets/images/updates/nrtf.jpeg",
+    "title": "Ravi d'annoncer que mon équipe a remporté le 1er Prix au concours National Re·Tech Fusion !",
+    "description": "Nous avons développé une plateforme IoT et edge computing pour Kilani Groupe afin d'optimiser la consommation énergétique industrielle. Organisé par le IEEE PES × PELS INSAT Joint Chapter."
+  },
+  {
     "id": 1,
     "image": "/assets/images/updates/gnnpic.jpg",
     "title": "Animation d'un Atelier sur les Réseaux de Neurones Graphiques à l'INSAT",
@@ -433,12 +451,12 @@ export const recentUpdates_french = [
     title: "3ème place au HACKATHON AINS (Sommet National d'Intelligence Artificielle)",
     description: "Notre équipe a affronté 20 autres avec un projet axé sur les agents IA, nous valant le 3ème prix."
   },
-  {
-    id: 6,
-    image: "/assets/images/updates/project-image01.jpg",
-    title: "1er prix au Enicar Coding Arena - Concours de Programmation Compétitive",
-    description: "Avec mon équipe, j'ai participé à un concours de programmation compétitive et résolu le plus grand nombre de problèmes."
-  },
+  // {
+  //   id: 6,
+  //   image: "/assets/images/updates/project-image01.jpg",
+  //   title: "1er prix au Enicar Coding Arena - Concours de Programmation Compétitive",
+  //   description: "Avec mon équipe, j'ai participé à un concours de programmation compétitive et résolu le plus grand nombre de problèmes."
+  // },
   {
     id: 7,
     image: "/assets/images/updates/hackathon.jpg",
@@ -592,6 +610,12 @@ export const timelineData_french = [
 
 export const awards_component_content_french = {
   awards: [
+    {
+      title: "1er Prix - National Re·Tech Fusion",
+      description:
+        "Remporté le 1er prix au concours National Re·Tech Fusion, organisé par le IEEE PES × PELS INSAT Joint Chapter, centré sur un défi industriel réel de Kilani Groupe. Développé une plateforme d'intelligence énergétique industrielle combinant IoT, edge computing et analyse de données pour surveiller et optimiser la consommation énergétique des usines. Également remporté le Best Art Award lors du même événement.",
+      prize: "1er Prix",
+    },
     {
       title: "1er Prix au TSYP Chess Coach Challenge",
       description:
