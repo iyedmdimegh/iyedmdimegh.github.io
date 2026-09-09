@@ -1,0 +1,416 @@
+@import 'tailwindcss';
+
+/* ============================================================================
+   NODES AND CURRENT
+
+   One drawing at three scales: the hero's node field, a project's labelled
+   schematic, and the current that becomes every control's interaction.
+
+   Two rules the world is built on:
+     - Enclosure is rare. Baseline, rule, depth and brightness carry rank.
+     - No midtone surfaces. A plane is lit or it is unlit; nothing hovers in
+       an uncommitted grey in between.
+   ============================================================================ */
+
+@theme {
+  --font-display: var(--f-display), 'Arial Narrow', system-ui, sans-serif;
+  --font-body: var(--f-body), system-ui, -apple-system, sans-serif;
+  --font-data: var(--f-data), ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --default-transition-duration: 240ms;
+  --default-transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   Dark is the default, and it is not a category default: the use scene decides
+   it. A recruiter opens this between other tabs late in a hiring day; a
+   committee reads it at night against a paper. Both of Iyed's own systems --
+   the graph explorer and the orbital simulator -- are navy-ground instruments,
+   and their screenshots are the largest objects on this site. A light ground
+   would frame them as foreign objects.
+   --------------------------------------------------------------------------- */
+:root {
+  --void: #080c16;
+  --void-deep: #05080f;
+  /* The one lifted plane. Used where enclosure is genuinely earned, never as
+     a default container. */
+  --raise: #0d1420;
+  --rule: #1b2942;
+  --rule-soft: #121c2d;
+
+  /* Rank is brightness, not a box. */
+  --ink: #e8f0fa;
+  --ink-2: #9fb3cd;
+  --ink-3: #7389ab;
+
+  --cyan: #35c4e8;
+  --cyan-quiet: #1d7d96;
+  --cyan-wash: rgb(53 196 232 / 0.11);
+  --magenta: #ff3d8b;
+  --magenta-quiet: #a32559;
+  --magenta-wash: rgb(255 61 139 / 0.11);
+
+  --ok: #3ecf8e;
+  --warn: #ffb020;
+  --crit: #ff5a52;
+
+  --edge: rgb(53 196 232 / 0.28);
+  --edge-live: rgb(255 61 139 / 0.68);
+  --node-alpha: 0.62;
+
+  /* Foreground for a filled accent surface. Measured: 5.86:1 on --magenta. */
+  --on-accent: #080c16;
+
+  --focus: var(--cyan);
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --void: #f3f6fb;
+  --void-deep: #e9eef6;
+  --raise: #ffffff;
+  --rule: #cbd7e6;
+  --rule-soft: #dfe7f1;
+
+  --ink: #0a1220;
+  --ink-2: #45596f;
+  --ink-3: #5a6e86;
+
+  --cyan: #0a6f8a;
+  --cyan-quiet: #4b93a6;
+  --cyan-wash: rgb(10 111 138 / 0.09);
+  --magenta: #c2185f;
+  --magenta-quiet: #93325f;
+  --magenta-wash: rgb(194 24 95 / 0.08);
+
+  --ok: #0b7f56;
+  --warn: #9a5b00;
+  --crit: #bf2f28;
+
+  --edge: rgb(10 111 138 / 0.22);
+  --edge-live: rgb(194 24 95 / 0.6);
+  --node-alpha: 0.8;
+
+  /* Dark ink on the lighter magenta reads 3.23:1; white reads 5.85:1. */
+  --on-accent: #ffffff;
+
+  color-scheme: light;
+}
+
+/* Base element styles live in @layer base so that Tailwind's utilities,
+   which sit in @layer utilities, can still override them. An unlayered
+   `a { color: inherit }` silently beats every text-colour utility on every
+   anchor on the site -- links, the primary call to action, contact rows --
+   because unlayered declarations outrank layered ones regardless of
+   specificity. That bug shipped once; the layer is what stops it. */
+@layer base {
+  * {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  html {
+    background: var(--void);
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ---------------------------------------------------------------------------
+     Browser surfaces. These ship with defaults that belong to no design system,
+     and theming them is the cheapest signal the page was built rather than
+     assembled.
+     --------------------------------------------------------------------------- */
+  ::selection {
+    background: var(--magenta);
+    color: var(--void);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-color: var(--cyan-quiet);
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+  a:hover {
+    text-decoration-color: var(--cyan);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--rule);
+    border-radius: 99px;
+    border: 3px solid var(--void);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--cyan-quiet);
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@keyframes current-run {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@layer components {
+  /* Data reads as data: measurements line up in columns wherever they appear. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* ---------------------------------------------------------------------------
+     Type roles.
+
+     Display is Anybody on its width axis -- an instrument face, set wide and
+     heavy at the top of the page and narrowing as it recedes. Data is Martian
+     Mono, and it appears only on things that are actually measured: figures,
+     units, identifiers. It is never a costume for "technical".
+     --------------------------------------------------------------------------- */
+  .t-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    font-stretch: 118%;
+    text-wrap: balance;
+  }
+
+  .t-section {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-stretch: 112%;
+    letter-spacing: -0.022em;
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+
+  .t-data {
+    font-family: var(--font-data);
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .t-measure {
+    max-width: 68ch;
+  }
+
+  /* ---------------------------------------------------------------------------
+     The rule. Structure comes from hairlines and space, not from boxes, so the
+     rule carries more weight here than a border normally would.
+     --------------------------------------------------------------------------- */
+  .rule-t {
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  /* The one place a colored rule is earned: a live current running along an
+     edge, animated only when something is actually flowing. */
+
+  .current-rule {
+    height: 1px;
+    background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--cyan) 18%,
+      var(--magenta) 42%,
+      transparent 60%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: current-run 5.5s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+  }
+
+
+  /* Schematic wiring: the current only runs while data really moves through it. */
+  .flow-path {
+    stroke-dasharray: 22 900;
+    stroke-dashoffset: 922;
+    animation: flow-dash 2.8s cubic-bezier(0.45, 0, 0.35, 1) infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .current-rule,
+    .flow-path {
+      animation: none;
+    }
+    .flow-path {
+      stroke-dashoffset: 0;
+      stroke-dasharray: none;
+      opacity: 0.55;
+    }
+  }
+}
+
+/* Entrance from an already-visible state: the page is fully readable with
+   JavaScript off or motion reduced, and the reveal only adds the last step. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 620ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 620ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .rise.seen {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scale three: the current, at the size of a control.
+
+   Every interactive thing resolves on the same current that runs the hero field
+   and the schematics — a cyan-to-magenta charge that fills from the leading
+   edge — rather than on a border colour swapping. `.ctl` is the shared
+   treatment; the press state is part of it, never an afterthought.
+   --------------------------------------------------------------------------- */
+.ctl {
+  position: relative;
+  isolation: isolate;
+  transition:
+    color 220ms cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 220ms cubic-bezier(0.32, 0.72, 0, 1),
+    transform 140ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* The charge itself: a hairline that runs the control's lower edge. */
+.ctl::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--cyan) 0%, var(--magenta) 72%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 340ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.ctl:hover::after,
+.ctl:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.ctl:hover {
+  border-color: var(--cyan);
+  color: var(--ink);
+}
+
+/* Pressed: the control takes the charge and moves under the finger. */
+.ctl:active {
+  transform: translateY(1px);
+}
+.ctl:active::after {
+  background: var(--magenta);
+  transform: scaleX(1);
+}
+
+/* The primary action is already filled, so its current runs as a brightening
+   sweep across the fill rather than a line beneath it. */
+.ctl-primary::after {
+  inset: 0;
+  height: auto;
+  background: linear-gradient(90deg, var(--cyan) 0%, var(--magenta) 68%);
+  opacity: 0;
+  transform: none;
+  transition: opacity 300ms cubic-bezier(0.32, 0.72, 0, 1);
+  z-index: -1;
+}
+.ctl-primary:hover::after,
+.ctl-primary:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+.ctl-primary:hover {
+  border-color: var(--cyan);
+}
+.ctl-primary:active {
+  transform: translateY(1px) scale(0.995);
+}
+
+/* The charge passes UNDER the label; it never becomes the label's colour.
+   `.ctl:hover` flips the foreground to --ink, which against the cyan end of
+   the charge measures 2.0:1 — least readable at the exact moment someone is
+   aiming at the site's conversion control. The primary opts out of that flip
+   and holds --on-accent, which stays above 5.8:1 across the whole sweep. */
+.ctl-primary,
+.ctl-primary:hover,
+.ctl-primary:focus-visible,
+.ctl-primary:active {
+  color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctl::after,
+  .ctl-primary::after {
+    transition: none;
+  }
+  .ctl:active,
+  .ctl-primary:active {
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   The readout strip. Proof figures are instrument readings, not a hero-metric
+   card: a state node, the value, and its direction on one baseline.
+   --------------------------------------------------------------------------- */
+.readout-mark {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+}
