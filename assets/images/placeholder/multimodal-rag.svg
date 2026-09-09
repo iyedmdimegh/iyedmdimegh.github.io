@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Figure pending">
+  <defs>
+    <pattern id="hatch-rag" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#5A6470" stroke-width="1" stroke-opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#hatch-rag)"/>
+  <rect x="0.5" y="0.5" width="1199" height="749" fill="none" stroke="#5A6470" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- A constellation graph, drawn as the schematic it will replace. -->
+  <g stroke="#5A6470" stroke-opacity="0.55" stroke-width="1.25" fill="none">
+    <path d="M600 375 L432 268"/><path d="M600 375 L771 291"/><path d="M600 375 L516 520"/>
+    <path d="M600 375 L740 487"/><path d="M432 268 L318 356"/><path d="M432 268 L470 154"/>
+    <path d="M771 291 L889 219"/><path d="M771 291 L905 372"/><path d="M516 520 L392 585"/>
+    <path d="M740 487 L862 566"/><path d="M740 487 L699 611"/>
+  </g>
+  <g fill="#5A6470" fill-opacity="0.7">
+    <circle cx="600" cy="375" r="13"/>
+    <circle cx="432" cy="268" r="8"/><circle cx="771" cy="291" r="8"/>
+    <circle cx="516" cy="520" r="8"/><circle cx="740" cy="487" r="8"/>
+    <circle cx="318" cy="356" r="5"/><circle cx="470" cy="154" r="5"/>
+    <circle cx="889" cy="219" r="5"/><circle cx="905" cy="372" r="5"/>
+    <circle cx="392" cy="585" r="5"/><circle cx="862" cy="566" r="5"/>
+    <circle cx="699" cy="611" r="5"/>
+  </g>
+
+  <g font-family="ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, Consolas, monospace" fill="#5A6470">
+    <text x="600" y="683" text-anchor="middle" font-size="21" letter-spacing="4.5" fill-opacity="0.95">FIGURE PENDING</text>
+    <text x="600" y="714" text-anchor="middle" font-size="15" letter-spacing="1.4" fill-opacity="0.72">constellation-graph interface · awaiting capture</text>
+  </g>
+</svg>
