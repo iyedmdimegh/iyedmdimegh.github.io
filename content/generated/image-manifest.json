@@ -1,0 +1,556 @@
+{
+  "/assets/images/pfp/logo.jpg": {
+    "width": 70,
+    "height": 71,
+    "widths": [
+      70
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 2747
+  },
+  "/assets/images/pfp/pfp.jpg": {
+    "width": 3456,
+    "height": 3456,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000,
+      3456
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 283418
+  },
+  "/assets/images/placeholder/industrial-energy.svg": {
+    "width": 0,
+    "height": 0,
+    "widths": [],
+    "formats": [],
+    "bytes": 1866
+  },
+  "/assets/images/placeholder/multimodal-rag.svg": {
+    "width": 0,
+    "height": 0,
+    "widths": [],
+    "formats": [],
+    "bytes": 1938
+  },
+  "/assets/images/project/3dpack/3dpack-poster.jpg": {
+    "width": 600,
+    "height": 338,
+    "widths": [
+      400,
+      600
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 21517
+  },
+  "/assets/images/project/chessCoach/image0.png": {
+    "width": 687,
+    "height": 426,
+    "widths": [
+      400,
+      687
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 40621
+  },
+  "/assets/images/project/chessCoach/image1.png": {
+    "width": 1020,
+    "height": 603,
+    "widths": [
+      400,
+      800,
+      1020
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 262778
+  },
+  "/assets/images/project/chessCoach/image2.png": {
+    "width": 832,
+    "height": 428,
+    "widths": [
+      400,
+      800,
+      832
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 43163
+  },
+  "/assets/images/project/chessCoach/image3.png": {
+    "width": 1029,
+    "height": 611,
+    "widths": [
+      400,
+      800,
+      1029
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 212628
+  },
+  "/assets/images/project/chessCoach/image4.png": {
+    "width": 777,
+    "height": 558,
+    "widths": [
+      400,
+      777
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 117825
+  },
+  "/assets/images/project/chessCoach/image5.png": {
+    "width": 962,
+    "height": 655,
+    "widths": [
+      400,
+      800,
+      962
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 113509
+  },
+  "/assets/images/project/edplatform/platform-0.png": {
+    "width": 500,
+    "height": 256,
+    "widths": [
+      400,
+      500
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 81368
+  },
+  "/assets/images/project/edplatform/platform-1.png": {
+    "width": 1906,
+    "height": 967,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1906
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 122820
+  },
+  "/assets/images/project/edplatform/platform-2.png": {
+    "width": 500,
+    "height": 268,
+    "widths": [
+      400,
+      500
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 64705
+  },
+  "/assets/images/project/introvert/introvert-0.png": {
+    "width": 869,
+    "height": 480,
+    "widths": [
+      400,
+      800,
+      869
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 111068
+  },
+  "/assets/images/project/introvert/introvert-1.png": {
+    "width": 648,
+    "height": 348,
+    "widths": [
+      400,
+      648
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 72153
+  },
+  "/assets/images/project/java/java-1.jpg": {
+    "width": 935,
+    "height": 572,
+    "widths": [
+      400,
+      800,
+      935
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 102076
+  },
+  "/assets/images/project/messenger/messenger-0.png": {
+    "width": 1515,
+    "height": 820,
+    "widths": [
+      400,
+      800,
+      1200,
+      1515
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 220373
+  },
+  "/assets/images/project/messenger/messenger-1.png": {
+    "width": 1030,
+    "height": 671,
+    "widths": [
+      400,
+      800,
+      1030
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 21973
+  },
+  "/assets/images/project/messenger/messenger-2.png": {
+    "width": 1332,
+    "height": 720,
+    "widths": [
+      400,
+      800,
+      1200,
+      1332
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 186696
+  },
+  "/assets/images/project/messenger/messenger-3.png": {
+    "width": 1332,
+    "height": 720,
+    "widths": [
+      400,
+      800,
+      1200,
+      1332
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 126231
+  },
+  "/assets/images/project/messenger/messenger-4.png": {
+    "width": 1358,
+    "height": 738,
+    "widths": [
+      400,
+      800,
+      1200,
+      1358
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 165272
+  },
+  "/assets/images/project/multimodal-rag/graph-explorer.png": {
+    "width": 1165,
+    "height": 541,
+    "widths": [
+      400,
+      800,
+      1165
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 564654
+  },
+  "/assets/images/project/sisp/architecture.png": {
+    "width": 1101,
+    "height": 1116,
+    "widths": [
+      400,
+      800,
+      1101
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 868620
+  },
+  "/assets/images/project/sisp/nuwa-simulator.png": {
+    "width": 1280,
+    "height": 720,
+    "widths": [
+      400,
+      800,
+      1200,
+      1280
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 581570
+  },
+  "/assets/images/project/smartshield/image0.png": {
+    "width": 951,
+    "height": 724,
+    "widths": [
+      400,
+      800,
+      951
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 354395
+  },
+  "/assets/images/project/smartshield/image1.png": {
+    "width": 1913,
+    "height": 1052,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1913
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 1306809
+  },
+  "/assets/images/project/smartshield/image2.png": {
+    "width": 1764,
+    "height": 959,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1764
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 714303
+  },
+  "/assets/images/project/smartshield/image3.png": {
+    "width": 1867,
+    "height": 1023,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      1867
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 1028925
+  },
+  "/assets/images/updates/aesh-2026-team.png": {
+    "width": 1280,
+    "height": 960,
+    "widths": [
+      400,
+      800,
+      1200,
+      1280
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 1423138
+  },
+  "/assets/images/updates/AINS-HACK.jpg": {
+    "width": 1197,
+    "height": 816,
+    "widths": [
+      400,
+      800,
+      1197
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 128180
+  },
+  "/assets/images/updates/gnnpic.jpg": {
+    "width": 7008,
+    "height": 4672,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000,
+      7008
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 1493877
+  },
+  "/assets/images/updates/hackathon.jpg": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      400,
+      800,
+      960
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 74916
+  },
+  "/assets/images/updates/nrtf.jpg": {
+    "width": 1024,
+    "height": 635,
+    "widths": [
+      400,
+      800,
+      1024
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 173021
+  },
+  "/assets/images/updates/project-image01.jpg": {
+    "width": 1080,
+    "height": 864,
+    "widths": [
+      400,
+      800,
+      1080
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 85069
+  },
+  "/assets/images/updates/project-image02.jpg": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 289687
+  },
+  "/assets/images/updates/smc-vienna.jpg": {
+    "width": 4032,
+    "height": 3024,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000,
+      4032
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 6658982
+  },
+  "/assets/images/updates/tsypchesspicceremonie.jpg": {
+    "width": 2048,
+    "height": 1536,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000,
+      2048
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 217903
+  },
+  "/assets/images/updates/vctaPic.jpg": {
+    "width": 2048,
+    "height": 1395,
+    "widths": [
+      400,
+      800,
+      1200,
+      1600,
+      2000,
+      2048
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "bytes": 499204
+  }
+}

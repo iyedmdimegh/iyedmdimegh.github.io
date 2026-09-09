@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Figure pending">
+  <defs>
+    <pattern id="hatch-energy" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#5A6470" stroke-width="1" stroke-opacity="0.16"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#hatch-energy)"/>
+  <rect x="0.5" y="0.5" width="1199" height="749" fill="none" stroke="#5A6470" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- A load trace over a plotted grid: the chart this figure will show. -->
+  <g stroke="#5A6470" stroke-opacity="0.28" stroke-width="1">
+    <line x1="220" y1="180" x2="980" y2="180"/>
+    <line x1="220" y1="290" x2="980" y2="290"/>
+    <line x1="220" y1="400" x2="980" y2="400"/>
+    <line x1="220" y1="510" x2="980" y2="510"/>
+  </g>
+  <g stroke="#5A6470" stroke-opacity="0.5" stroke-width="1.25">
+    <line x1="220" y1="150" x2="220" y2="540"/>
+    <line x1="220" y1="540" x2="980" y2="540"/>
+  </g>
+
+  <path d="M220 470 L296 438 L372 452 L448 351 L524 372 L600 254 L676 300 L752 232 L828 318 L904 286 L980 340"
+        fill="none" stroke="#5A6470" stroke-opacity="0.75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <g fill="#5A6470" fill-opacity="0.6">
+    <circle cx="448" cy="351" r="4.5"/><circle cx="600" cy="254" r="4.5"/><circle cx="752" cy="232" r="4.5"/>
+  </g>
+
+  <g font-family="ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, Consolas, monospace" fill="#5A6470">
+    <text x="600" y="683" text-anchor="middle" font-size="21" letter-spacing="4.5" fill-opacity="0.95">FIGURE PENDING</text>
+    <text x="600" y="714" text-anchor="middle" font-size="15" letter-spacing="1.4" fill-opacity="0.72">factory energy dashboard · awaiting capture</text>
+  </g>
+</svg>
